@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <title>Programme des matières — LanguageMaster</title>
+    <style>
+        .matiere-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        .matiere-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .matiere-header h1 {
+            font-size: 2.2em;
+            color: var(--text);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .matiere-header h1 i {
+            color: var(--accent);
+        }
+
+        .matiere-header p {
+            color: var(--text-light);
+            font-size: 1.05em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Onglets langue */
+        .matiere-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .matiere-tab {
+            padding: 12px 28px;
+            border: 2px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text);
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 1em;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .matiere-tab:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .matiere-tab.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+            box-shadow: 0 4px 16px rgba(255, 152, 0, 0.4);
+        }
+
+        /* Tableaux */
+        .tableau-matiere {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .tableau-matiere.active {
+            display: block;
+        }
+
+        table.recapitulatif {
+            border-collapse: separate;
+            border-spacing: 0;
+            font-family: inherit;
+            margin: 0 auto;
+            width: 100%;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            background: var(--bg-card);
+        }
+
+        table.recapitulatif th,
+        table.recapitulatif td {
+            padding: 14px 16px;
+            text-align: center;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+
+        table.recapitulatif thead th {
+            background: var(--primary-dark);
+            color: white;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+
+        table.recapitulatif tbody tr {
+            transition: var(--transition);
+        }
+
+        table.recapitulatif tbody tr:hover {
+            background: var(--bg-hover);
+        }
+
+        /* Couleurs de niveaux */
+        .niveau-debutant td {
+            background: #d4edda;
+            color: #155724;
+            font-weight: 700;
+        }
+
+        .niveau-intermediaire td {
+            background: #fff3cd;
+            color: #856404;
+            font-weight: 700;
+        }
+
+        .niveau-avance td {
+            background: #f8d7da;
+            color: #721c24;
+            font-weight: 700;
+        }
+
+        .niveau-professionnel td {
+            background: #cce5ff;
+            color: #004085;
+            font-weight: 700;
+        }
+
+        body.dark .niveau-debutant td {
+            background: #14532d;
+            color: #dcfce7;
+        }
+
+        body.dark .niveau-intermediaire td {
+            background: #78350f;
+            color: #fef3c7;
+        }
+
+        body.dark .niveau-avance td {
+            background: #7f1d1d;
+            color: #fee2e2;
+        }
+
+        body.dark .niveau-professionnel td {
+            background: #1e3a8a;
+            color: #dbeafe;
+        }
+
+        .total-row {
+            background: var(--primary-dark);
+            color: white;
+            font-size: 1.05em;
+        }
+
+        .total-row td {
+            background: var(--primary-dark) !important;
+            color: white !important;
+            border-bottom: none;
+        }
+
+        /* Lignes simples (alternance) */
+        table.recapitulatif tbody tr td[colspan] {
+            background: var(--bg-card);
+            color: var(--text);
+        }
+
+        /* Responsive : scroll horizontal */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: var(--radius-md);
+        }
+
+        @media (max-width: 768px) {
+            .matiere-header h1 { font-size: 1.6em; }
+            table.recapitulatif th,
+            table.recapitulatif td {
+                padding: 10px 12px;
+                font-size: 0.85em;
+                white-space: nowrap;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>LanguageMaster <span class="ouvreMenu">&#9776;</span></h2>
+    <nav class="menu">
+        <a href="index.html"><i class="fas fa-home"></i>Accueil</a>
+        <a href="profil.html"><i class="fas fa-user"></i> Compte</a>
+        <div class="modeSombre"><i class="fas fa-sun"></i>Mode sombre <div class="out"><div class="in"></div></div></div>
+        <a href="anglais.html"><i class="fas fa-book-open-reader"></i> Apprendre l'anglais</a>
+        <a href="francais.html"><i class="fas fa-book-open-reader"></i> Apprendre le Français</a>
+        <a href="exercice.html"><i class="fas fa-graduation-cap"></i> Pratique</a>
+        <a href="livre.html"><i class="fas fa-book"></i>Guide premium <i class="fas fa-crown"></i></a>
+        <a href="matiere.html"><i class="fas fa-list"></i>Matiere</a>
+        <a href=""><i class="fas fa-share-alt"></i>Partager</a>
+        <a href=""><i class="fab fa-whatsapp"></i>Nous contacter</a>
+    </nav>
+</header>
+
+<main class="matiere-container">
+
+    <div class="matiere-header">
+        <h1><i class="fas fa-list"></i> Programme des matières</h1>
+        <p>Retrouvez tous les modules et leçons disponibles, classés par langue et par niveau.</p>
+    </div>
+
+    <div class="matiere-tabs">
+        <button class="matiere-tab active" data-langue="anglais">
+            <i class="fas fa-language"></i> Anglais
+        </button>
+        <button class="matiere-tab" data-langue="francais">
+            <i class="fas fa-language"></i> Français
+        </button>
+    </div>
+
+    <!-- ============ TABLEAU ANGLAIS ============ -->
+    <div class="tableau-matiere active" id="tableau-anglais">
+        <div class="table-wrapper">
+            <table class="recapitulatif">
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Module</th>
+                        <th>Thème</th>
+                        <th>Nombre de leçons</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- ========== DÉBUTANT ========== -->
+                    <tr class="niveau-debutant">
+                        <td rowspan="8">Débutant<br>(A1 – A2)</td>
+                        <td>Module 1</td><td>Les articles</td><td>5</td>
+                    </tr>
+                    <tr class="niveau-debutant"><td>Module 2</td><td>Les noms</td><td>6</td></tr>
+                    <tr class="niveau-debutant"><td>Module 3</td><td>Les nombres</td><td>6</td></tr>
+                    <tr class="niveau-debutant"><td>Module 4</td><td>Les verbes (bases)</td><td>6</td></tr>
+                    <tr class="niveau-debutant"><td>Module 5</td><td>Les adjectifs</td><td>5</td></tr>
+                    <tr class="niveau-debutant"><td>Module 6</td><td>Les pronoms</td><td>5</td></tr>
+                    <tr class="niveau-debutant"><td>Module 7</td><td>Les adverbes</td><td>4</td></tr>
+                    <tr class="niveau-debutant"><td>Module 8</td><td>Les bases de la phrase</td><td>5</td></tr>
+
+                    <!-- ========== INTERMÉDIAIRE ========== -->
+                    <tr class="niveau-intermediaire">
+                        <td rowspan="12">Intermédiaire<br>(B1 – B2)</td>
+                        <td>Module 9</td><td>Les articles (approfondi)</td><td>4</td>
+                    </tr>
+                    <tr class="niveau-intermediaire"><td>Module 10</td><td>Les noms (approfondi)</td><td>4</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 11</td><td>Les nombres (approfondi)</td><td>3</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 12</td><td>Les temps du passé</td><td>6</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 13</td><td>Le futur</td><td>4</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 14</td><td>Les modaux</td><td>5</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 15</td><td>Les adjectifs (approfondi)</td><td>6</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 16</td><td>Les pronoms (approfondi)</td><td>3</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 17</td><td>Les adverbes (approfondi)</td><td>4</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 18</td><td>Les verbes à particules</td><td>4</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 19</td><td>La voix passive</td><td>4</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 20</td><td>Le discours indirect</td><td>4</td></tr>
+
+                    <!-- ========== AVANCÉ ========== -->
+                    <tr class="niveau-avance">
+                        <td rowspan="10">Avancé<br>(C1 – C2)</td>
+                        <td>Module 21</td><td>Les articles (maîtrise)</td><td>3</td>
+                    </tr>
+                    <tr class="niveau-avance"><td>Module 22</td><td>Les noms (maîtrise)</td><td>3</td></tr>
+                    <tr class="niveau-avance"><td>Module 23</td><td>Les verbes (maîtrise)</td><td>6</td></tr>
+                    <tr class="niveau-avance"><td>Module 24</td><td>Les adjectifs (maîtrise)</td><td>4</td></tr>
+                    <tr class="niveau-avance"><td>Module 25</td><td>Les pronoms (maîtrise)</td><td>3</td></tr>
+                    <tr class="niveau-avance"><td>Module 26</td><td>Les adverbes (maîtrise)</td><td>4</td></tr>
+                    <tr class="niveau-avance"><td>Module 27</td><td>Les temps avancés</td><td>4</td></tr>
+                    <tr class="niveau-avance"><td>Module 28</td><td>Les structures avancées</td><td>5</td></tr>
+                    <tr class="niveau-avance"><td>Module 29</td><td>Le style et le registre</td><td>5</td></tr>
+                    <tr class="niveau-avance"><td>Module 30</td><td>La phonétique et la prononciation</td><td>5</td></tr>
+
+                    <!-- ========== PROFESSIONNEL ========== -->
+                    <tr class="niveau-professionnel">
+                        <td rowspan="20">Professionnel</td>
+                        <td>Module 31</td><td>Business English (bases)</td><td>6</td>
+                    </tr>
+                    <tr class="niveau-professionnel"><td>Module 32</td><td>Les emails professionnels</td><td>7</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 33</td><td>Les réunions (Meetings)</td><td>7</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 34</td><td>Le téléphone professionnel</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 35</td><td>La négociation</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 36</td><td>Les présentations</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 37</td><td>CV et lettres de motivation</td><td>5</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 38</td><td>Les entretiens d'embauche</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 39</td><td>Finance et comptabilité</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 40</td><td>Marketing et communication</td><td>5</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 41</td><td>Voyages d'affaires</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 42</td><td>Anglais juridique</td><td>5</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 43</td><td>Rapports et documentation</td><td>5</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 44</td><td>Management et leadership</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 45</td><td>Les proverbes anglais</td><td>8</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 46</td><td>Les expressions idiomatiques</td><td>8</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 47</td><td>Les expressions courantes</td><td>8</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 48</td><td>La correspondance formelle</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 49</td><td>L'anglais international</td><td>6</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 50</td><td>Développement de carrière</td><td>6</td></tr>
+
+                    <!-- ========== TOTAL ========== -->
+                    <tr class="total-row">
+                        <td colspan="3"><strong>TOTAL GÉNÉRAL</strong></td>
+                        <td><strong>250</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ============ TABLEAU FRANÇAIS ============ -->
+    <div class="tableau-matiere" id="tableau-francais">
+        <div class="table-wrapper">
+            <table class="recapitulatif">
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Module</th>
+                        <th>Thème</th>
+                        <th>Nombre de leçons</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- ========== DÉBUTANT ========== -->
+                    <tr class="niveau-debutant">
+                        <td rowspan="8">Débutant</td>
+                        <td>Module 1</td><td>Les articles et déterminants</td><td>8</td>
+                    </tr>
+                    <tr class="niveau-debutant"><td>Module 2</td><td>Les noms</td><td>3</td></tr>
+                    <tr class="niveau-debutant"><td>Module 3</td><td>Les adjectifs</td><td>2</td></tr>
+                    <tr class="niveau-debutant"><td>Module 4</td><td>Les pronoms</td><td>5</td></tr>
+                    <tr class="niveau-debutant"><td>Module 5</td><td>Les verbes (bases)</td><td>7</td></tr>
+                    <tr class="niveau-debutant"><td>Module 6</td><td>Les adverbes</td><td>1</td></tr>
+                    <tr class="niveau-debutant"><td>Module 7</td><td>Les connecteurs logiques (intro)</td><td>1</td></tr>
+                    <tr class="niveau-debutant"><td>Module 8</td><td>Révisions</td><td>—</td></tr>
+
+                    <!-- ========== INTERMÉDIAIRE ========== -->
+                    <tr class="niveau-intermediaire">
+                        <td rowspan="6">Intermédiaire</td>
+                        <td>Module 9</td><td>Connecteurs logiques approfondis</td><td>1</td>
+                    </tr>
+                    <tr class="niveau-intermediaire"><td>Module 10</td><td>Les locutions</td><td>1</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 11</td><td>Le langage soutenu</td><td>1</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 12</td><td>Les temps composés</td><td>2</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 13</td><td>Voix passive et discours indirect</td><td>2</td></tr>
+                    <tr class="niveau-intermediaire"><td>Module 14</td><td>Le subjonctif</td><td>1</td></tr>
+
+                    <!-- ========== AVANCÉ ========== -->
+                    <tr class="niveau-avance">
+                        <td rowspan="6">Avancé</td>
+                        <td>Module 15</td><td>Style et registres de langue</td><td>1</td>
+                    </tr>
+                    <tr class="niveau-avance"><td>Module 16</td><td>Les figures de style</td><td>1</td></tr>
+                    <tr class="niveau-avance"><td>Module 17</td><td>La phonétique française</td><td>1</td></tr>
+                    <tr class="niveau-avance"><td>Module 18</td><td>Difficultés orthographiques</td><td>1</td></tr>
+                    <tr class="niveau-avance"><td>Module 19</td><td>L'argumentation</td><td>1</td></tr>
+                    <tr class="niveau-avance"><td>Module 20</td><td>Le langage soutenu approfondi</td><td>1</td></tr>
+
+                    <!-- ========== PROFESSIONNEL ========== -->
+                    <tr class="niveau-professionnel">
+                        <td rowspan="6">Professionnel</td>
+                        <td>Module 21</td><td>Rédaction professionnelle</td><td>1</td>
+                    </tr>
+                    <tr class="niveau-professionnel"><td>Module 22</td><td>Courriels professionnels</td><td>1</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 23</td><td>Rapports professionnels</td><td>1</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 24</td><td>Entretiens professionnels</td><td>1</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 25</td><td>Négociation professionnelle</td><td>1</td></tr>
+                    <tr class="niveau-professionnel"><td>Module 26</td><td>Langage soutenu professionnel</td><td>1</td></tr>
+
+                    <!-- ========== TOTAL ========== -->
+                    <tr class="total-row">
+                        <td colspan="3"><strong>TOTAL FRANÇAIS</strong></td>
+                        <td><strong>55</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</main>
+
+<script src="commun.js"></script>
+<script>
+    // Gestion des onglets langue (Anglais / Français)
+    (function initMatiereTabs() {
+        const tabs = document.querySelectorAll('.matiere-tab');
+        const tableaux = document.querySelectorAll('.tableau-matiere');
+        if (!tabs.length) return;
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const langue = tab.dataset.langue;
+                tabs.forEach(t => t.classList.toggle('active', t === tab));
+                tableaux.forEach(tb => tb.classList.toggle('active', tb.id === 'tableau-' + langue));
+            });
+        });
+    })();
+</script>
+</body>
+</html>

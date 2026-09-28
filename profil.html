@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon compte — LanguageMaster</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="profil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <h2>LanguageMaster <span class="ouvreMenu">&#9776;</span></h2>
+  <nav class="menu">
+    <a href="index.html"><i class="fas fa-home"></i>Accueil</a>
+    <a href="profil.html"><i class="fas fa-user"></i> Compte</a>
+    <div class="modeSombre"><i class="fas fa-sun"></i>Mode sombre <div class="out"><div class="in"></div></div></div>
+    <a href="anglais.html"><i class="fas fa-book-open-reader"></i> Apprendre l'anglais</a>
+    <a href="francais.html"><i class="fas fa-book-open-reader"></i> Apprendre le Français</a>
+    <a href="exercice.html"><i class="fas fa-graduation-cap"></i> Pratique</a>
+    <a href="livre.html"><i class="fas fa-book"></i>Guide premium <i class="fas fa-crown"></i></a>
+    <a href="matiere.html"><i class="fas fa-list"></i>Matiere</a>
+    <a href=""><i class="fas fa-share-alt"></i>Partager</a>
+    <a href=""><i class="fab fa-whatsapp"></i>Nous contacter</a>
+  </nav>
+</header>
+
+<div class="overlay-compte" id="overlay"></div>
+
+<div class="connexion" id="connexion">
+  <button class="close-btn" id="closeBtn" aria-label="Fermer">
+    <i class="fas fa-times"></i>
+  </button>
+  <h3>Se connecter</h3>
+  <p>Veuillez choisir un compte</p>
+  <button class="btn-google">Continuer avec Google</button>
+  <button class="btn-facebook">Continuer avec Facebook</button>
+  
+</div>
+
+<div class="monCompte">
+  <div class="profil"><i class="fas fa-user"></i></div>
+  <h3>Mes cours</h3>
+
+  <!-- ============ ANGLAIS ============ -->
+  <p>Anglais — Progression</p>
+  <p class="aide-progression">Chaque barre affiche ton meilleur score aux exercices du niveau. Clique sur un niveau pour t'entraîner.</p>
+
+  <div class="begin" data-niveau="debutant" role="link" tabindex="0">
+    <h5>Débutant</h5>
+    <div class="progress-dashboard">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" data-niveau="debutant" style="width:0%"></div>
+      </div>
+      <span class="progress-text" data-niveau="debutant">0%</span>
+    </div>
+  </div>
+
+  <div class="begin" data-niveau="intermediaire" role="link" tabindex="0">
+    <h5>Intermédiaire</h5>
+    <div class="progress-dashboard">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" data-niveau="intermediaire" style="width:0%"></div>
+      </div>
+      <span class="progress-text" data-niveau="intermediaire">0%</span>
+    </div>
+  </div>
+
+  <div class="begin" data-niveau="avance" role="link" tabindex="0">
+    <h5>Avancé</h5>
+    <div class="progress-dashboard">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" data-niveau="avance" style="width:0%"></div>
+      </div>
+      <span class="progress-text" data-niveau="avance">0%</span>
+    </div>
+  </div>
+
+  <div class="begin" data-niveau="professionnel" role="link" tabindex="0">
+    <h5>Professionnel</h5>
+    <div class="progress-dashboard">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" data-niveau="professionnel" style="width:0%"></div>
+      </div>
+      <span class="progress-text" data-niveau="professionnel">0%</span>
+    </div>
+  </div>
+
+  <!-- ============ FRANÇAIS ============ -->
+  <p style="margin-top: 32px;">Français — Progression</p>
+  <p class="aide-progression">Clique sur un niveau pour t'entraîner.</p>
+
+  <div class="begin" data-niveau="fr_debutant" role="link" tabindex="0">
+    <h5>Débutant</h5>
+    <div class="progress-dashboard">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" data-niveau="fr_debutant" style="width:0%"></div>
+      </div>
+      <span class="progress-text" data-niveau="fr_debutant">0%</span>
+    </div>
+  </div>
+
+  <div class="begin" data-niveau="fr_intermediaire" role="link" tabindex="0">
+    <h5>Intermédiaire</h5>
+    <div class="progress-dashboard">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" data-niveau="fr_intermediaire" style="width:0%"></div>
+      </div>
+      <span class="progress-text" data-niveau="fr_intermediaire">0%</span>
+    </div>
+  </div>
+
+  <div class="begin" data-niveau="fr_avance" role="link" tabindex="0">
+    <h5>Avancé</h5>
+    <div class="progress-dashboard">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" data-niveau="fr_avance" style="width:0%"></div>
+      </div>
+      <span class="progress-text" data-niveau="fr_avance">0%</span>
+    </div>
+  </div>
+
+  <div class="begin" data-niveau="fr_professionnel" role="link" tabindex="0">
+    <h5>Professionnel</h5>
+    <div class="progress-dashboard">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" data-niveau="fr_professionnel" style="width:0%"></div>
+      </div>
+      <span class="progress-text" data-niveau="fr_professionnel">0%</span>
+    </div>
+  </div>
+</div>
+
+<script src="commun.js"></script>
+<script src="profil.js"></script>
+</body>
+</html>

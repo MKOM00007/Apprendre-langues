@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="cours.css">
+    <link rel="stylesheet" href="exercice.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <title>Pratique — Français — LanguageMaster</title>
+</head>
+<body>
+
+<header>
+    <h2>LanguageMaster <span class="ouvreMenu">&#9776;</span></h2>
+    <nav class="menu">
+        <a href="index.html"><i class="fas fa-home"></i>Accueil</a>
+        <a href="profil.html"><i class="fas fa-user"></i> Compte</a>
+        <div class="modeSombre"><i class="fas fa-sun"></i>Mode sombre <div class="out"><div class="in"></div></div></div>
+        <a href="anglais.html"><i class="fas fa-book-open-reader"></i> Apprendre l'anglais</a>
+        <a href="francais.html"><i class="fas fa-book-open-reader"></i> Apprendre le Français</a>
+        <a href="exercice.html"><i class="fas fa-graduation-cap"></i> Pratique</a>
+        <a href="livre.html"><i class="fas fa-book"></i>Guide premium <i class="fas fa-crown"></i></a>
+        <a href="matiere.html"><i class="fas fa-list"></i>Matiere</a>
+        <a href=""><i class="fas fa-share-alt"></i>Partager</a>
+        <a href=""><i class="fab fa-whatsapp"></i>Nous contacter</a>
+    </nav>
+</header>
+
+<div class="onglet-langue sans-recherche">
+    <div class="onglet-langue-contour">
+        <button class="btn-onglet-langue active" data-niveau="fr_debutant">Débutant <span class="badge-score" data-niveau="fr_debutant"></span></button>
+        <button class="btn-onglet-langue" data-niveau="fr_intermediaire">Intermédiaire <span class="badge-score" data-niveau="fr_intermediaire"></span></button>
+        <button class="btn-onglet-langue" data-niveau="fr_avance">Avancé <span class="badge-score" data-niveau="fr_avance"></span></button>
+        <button class="btn-onglet-langue" data-niveau="fr_professionnel">Professionnel <span class="badge-score" data-niveau="fr_professionnel"></span></button>
+    </div>
+</div>
+
+<main class="exercice-container">
+    <div class="progress-wrapper">
+        <div class="progress-info">
+            <span id="progressLabel">Question 1 / 5</span>
+            <span id="progressScore">Score : 0</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+        </div>
+    </div>
+
+    <div class="question-card" id="questionCard">
+        <span class="question-type" id="questionType"></span>
+        <p class="question-consigne" id="questionConsigne"></p>
+        <h3 id="questionText">Chargement…</h3>
+        <div class="answers" id="answersContainer"></div>
+        <div class="feedback" id="feedback" aria-live="polite"></div>
+    </div>
+
+    <div class="nav-buttons">
+        <button id="btnPrev" class="btn-nav"><i class="fas fa-arrow-left"></i> Précédent</button>
+        <button id="btnValidate" class="btn-nav btn-validate">Valider</button>
+        <button id="btnNext" class="btn-nav">Suivant <i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <div class="result-card cache" id="resultCard">
+        <h2>Niveau terminé !</h2>
+        <p id="finalScore"></p>
+        <ul class="recap" id="recap"></ul>
+        <div class="result-actions">
+            <button id="btnRestart" class="btn-nav btn-validate">Recommencer</button>
+            <button id="btnNiveauSuivant" class="btn-nav">Niveau suivant <i class="fas fa-arrow-right"></i></button>
+            <a href="profil.html" class="btn-nav"><i class="fas fa-user"></i> Ma progression</a>
+        </div>
+    </div>
+</main>
+
+<script src="commun.js"></script>
+<script src="data-exercices.js"></script>
+<script src="exercicefr.js"></script>
+</body>
+</html>

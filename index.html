@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <title>LanguageMaster — Apprenez l'anglais et le français</title>
+   
+</head>
+<body>
+
+<header>
+    <h2>LanguageMaster <span class="ouvreMenu">&#9776;</span></h2>
+    <nav class="menu">
+        <a href="index.html"><i class="fas fa-home"></i>Accueil</a>
+        <a href="profil.html"><i class="fas fa-user"></i> Compte</a>
+        <div class="modeSombre"><i class="fas fa-sun"></i>Mode sombre <div class="out"><div class="in"></div></div></div>
+        <a href="anglais.html"><i class="fas fa-book-open-reader"></i> Apprendre l'anglais</a>
+        <a href="francais.html"><i class="fas fa-book-open-reader"></i> Apprendre le Français</a>
+        <a href="exercice.html"><i class="fas fa-graduation-cap"></i> Pratique</a>
+        <a href="livre.html"><i class="fas fa-book"></i>Guide premium <i class="fas fa-crown"></i></a>
+        <a href="matiere.html"><i class="fas fa-list"></i>Matiere</a>
+        <a href=""><i class="fas fa-share-alt"></i>Partager</a>
+        <a href=""><i class="fab fa-whatsapp"></i>Nous contacter</a>
+    </nav>
+</header>
+
+<!-- ============ ESPACE ADMIN============ -->
+<div class="overlay-admin cache" id="overlayAdmin"></div>
+<div class="admin-panel cache" id="adminPanel">
+    <button class="close-btn" id="closeAdmin" aria-label="Fermer">
+        <i class="fas fa-times"></i>
+    </button>
+    <h3><i class="fas fa-chart-simple"></i> Espace admin</h3>
+    <p class="admin-sous-titre">Nombre de vues par page (stocké localement)</p>
+    <ul class="admin-liste" id="adminListe"></ul>
+    <p class="admin-total" id="adminTotal"></p>
+    <button class="btn-admin-reset" id="btnResetVues">
+        <i class="fas fa-rotate-left"></i> Réinitialiser les compteurs
+    </button>
+</div>
+
+<main class="accueil">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <h1>Apprenez l'anglais et le français à votre rythme</h1>
+        <p>Des cours structurés, des exercices interactifs, un suivi de progression. Maîtrisez deux langues avec une seule plateforme.</p>
+        <br>
+        <div class="hero-actions">
+            <a href="anglais.html" class="btn-hero btn-hero-primary">
+                <i class="fas fa-book-open-reader"></i> Commencer l'anglais
+            </a>
+            <a href="francais.html" class="btn-hero btn-hero-secondary">
+                <i class="fas fa-book-open-reader"></i> Commencer le français
+            </a>
+        </div>
+    </section>
+
+    <!-- ============ CHOIX DE LANGUE ============ -->
+    <section class="langues-choix">
+        <h2>Choisissez votre langue</h2>
+        <div class="langues-grid">
+
+            <a href="anglais.html" class="langue-card langue-en">
+                <div class="langue-card-icon"><i class="fas fa-language"></i></div>
+                <h3>Anglais</h3>
+                <p>De débutant à professionnel, maîtrisez l'anglais du quotidien et des affaires.</p>
+                <ul class="langue-card-features">
+                    <li><i class="fas fa-check"></i> 50 modules structurés</li>
+                    <li><i class="fas fa-check"></i> Plus de 200 leçons</li>
+                    <li><i class="fas fa-check"></i> Exercices interactifs</li>
+                    <li><i class="fas fa-check"></i> Expressions idiomatiques</li>
+                </ul>
+                <span class="btn-langue-card">Explorer <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+            <a href="francais.html" class="langue-card langue-fr">
+                <div class="langue-card-icon"><i class="fas fa-language"></i></div>
+                <h3>Français</h3>
+                <p>Perfectionnez votre français : grammaire, conjugaison, style et rédaction professionnelle.</p>
+                <ul class="langue-card-features">
+                    <li><i class="fas fa-check"></i> 4 niveaux progressifs</li>
+                    <li><i class="fas fa-check"></i> Grammaire et conjugaison</li>
+                    <li><i class="fas fa-check"></i> Figures de style</li>
+                    <li><i class="fas fa-check"></i> Rédaction professionnelle</li>
+                </ul>
+                <span class="btn-langue-card">Explorer <i class="fas fa-arrow-right"></i></span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ============ FONCTIONNALITÉS ============ -->
+    <section class="features">
+        <h2>Pourquoi LanguageMaster ?</h2>
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Cours structurés</h3>
+                <p>Des leçons claires, organisées par niveau et par thème, avec règles, exemples et récapitulatifs.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-pencil-alt"></i>
+                <h3>Exercices interactifs</h3>
+                <p>QCM, vrai/faux, textes à compléter, remise en ordre : entraînez-vous de manière variée.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Suivi de progression</h3>
+                <p>Vos scores sont sauvegardés. Consultez votre progression sur la page Compte.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-moon"></i>
+                <h3>Mode sombre</h3>
+                <p>Étudiez confortablement de jour comme de nuit, avec un thème adapté à vos yeux.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-search"></i>
+                <h3>Recherche instantanée</h3>
+                <p>Retrouvez rapidement n'importe quelle leçon grâce à la recherche intégrée.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Responsive</h3>
+                <p>Apprenez sur ordinateur, tablette ou smartphone : l'interface s'adapte à votre écran.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ NIVEAUX ============ -->
+    <section class="niveaux">
+        <h2>4 niveaux pour progresser</h2>
+        <p class="niveaux-intro">Chaque niveau contient plusieurs modules thématiques et des exercices dédiés.</p>
+
+        <div class="niveaux-grid">
+
+            <div class="niveau-card niveau-card-debutant">
+                <span class="niveau-badge">A1 — A2</span>
+                <h3>Débutant</h3>
+                <p>Articles, noms, verbes de base, présent simple. Les fondations indispensables.</p>
+            </div>
+
+            <div class="niveau-card niveau-card-intermediaire">
+                <span class="niveau-badge">B1 — B2</span>
+                <h3>Intermédiaire</h3>
+                <p>Temps du passé, futur, modaux, comparatifs, phrasal verbs. Consolidez vos acquis.</p>
+            </div>
+
+            <div class="niveau-card niveau-card-avance">
+                <span class="niveau-badge">C1 — C2</span>
+                <h3>Avancé</h3>
+                <p>Subjonctif, conditionnels, structures avancées, style et phonétique. Affinez votre maîtrise.</p>
+            </div>
+
+            <div class="niveau-card niveau-card-pro">
+                <span class="niveau-badge">Pro</span>
+                <h3>Professionnel</h3>
+                <p>Business English, emails, réunions, négociation, CV. Pour réussir à l'international.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="cta-final">
+        <h2>Prêt à commencer ?</h2>
+        <p>Rejoignez LanguageMaster et progressez dès aujourd'hui.</p>
+        <div class="cta-actions">
+            <a href="anglais.html" class="btn-hero btn-hero-primary">
+                <i class="fas fa-book-open-reader"></i> Apprendre l'anglais
+            </a>
+            <a href="profil.html" class="btn-hero btn-hero-secondary">
+                <i class="fas fa-user"></i> Voir ma progression
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<script src="commun.js"></script>
+<script>
+    /* ============ ESPACE ADMIN — déclenché par 10 clics sur le titre ============ */
+    (function initEspaceAdmin() {
+        const titre = document.querySelector('header h2');
+        const overlay = document.getElementById('overlayAdmin');
+        const panel = document.getElementById('adminPanel');
+        const closeBtn = document.getElementById('closeAdmin');
+        const liste = document.getElementById('adminListe');
+        const totalEl = document.getElementById('adminTotal');
+        const btnReset = document.getElementById('btnResetVues');
+        if (!titre || !overlay || !panel) return;
+
+        // Nom lisible pour chaque page suivie
+        const PAGES = {
+            'index.html': 'Accueil',
+            'anglais.html': "Apprendre l'anglais",
+            'francais.html': 'Apprendre le français',
+            'exercice.html': 'Exercices — Anglais',
+            'exercicefr.html': 'Exercices — Français',
+            'livre.html': 'Guide premium',
+            'matiere.html': 'Programme des matières',
+            'profil.html': 'Mon compte'
+        };
+
+        let nbClics = 0;
+        let dernierClic = 0;
+
+        function afficherCompteurs() {
+            const vues = lireVues();
+            liste.replaceChildren();
+            let total = 0;
+
+            Object.keys(PAGES).forEach(page => {
+                const n = Number(vues[page]) || 0;
+                total += n;
+
+                const li = document.createElement('li');
+                const nom = document.createElement('span');
+                nom.className = 'nom-page';
+                nom.textContent = PAGES[page];
+                const compte = document.createElement('span');
+                compte.className = 'compte-vues';
+                compte.textContent = n;
+
+                li.appendChild(nom);
+                li.appendChild(compte);
+                liste.appendChild(li);
+            });
+
+            totalEl.textContent = `Total : ${total} vue${total > 1 ? 's' : ''}`;
+        }
+
+        function ouvrirAdmin() {
+            afficherCompteurs();
+            overlay.classList.remove('cache');
+            panel.classList.remove('cache');
+        }
+
+        function fermerAdmin() {
+            overlay.classList.add('cache');
+            panel.classList.add('cache');
+        }
+
+        titre.addEventListener('click', (e) => {
+            // Ignore les clics sur le bouton hamburger (menu latéral)
+            if (e.target.closest('.ouvreMenu')) return;
+
+            const maintenant = Date.now();
+            // Réinitialise le compteur de clics si trop de temps s'est écoulé
+            if (maintenant - dernierClic > 2000) nbClics = 0;
+            dernierClic = maintenant;
+            nbClics++;
+
+            if (nbClics >= 10) {
+                nbClics = 0;
+                ouvrirAdmin();
+            }
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', fermerAdmin);
+        overlay.addEventListener('click', fermerAdmin);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') fermerAdmin(); });
+
+        if (btnReset) {
+            btnReset.addEventListener('click', () => {
+                ecrireVues({});
+                afficherCompteurs();
+            });
+        }
+    })();
+</script>
+</body>
+</html>

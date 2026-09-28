@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="cours.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <title>Apprendre le français — LanguageMaster</title>
+</head>
+<body>
+
+<header>
+    <h2>LanguageMaster <span class="ouvreMenu">&#9776;</span></h2>
+    <nav class="menu">
+        <a href="index.html"><i class="fas fa-home"></i>Accueil</a>
+        <a href="profil.html"><i class="fas fa-user"></i> Compte</a>
+        <div class="modeSombre"><i class="fas fa-sun"></i>Mode sombre <div class="out"><div class="in"></div></div></div>
+        <a href="anglais.html"><i class="fas fa-book-open-reader"></i> Apprendre l'anglais</a>
+        <a href="francais.html"><i class="fas fa-book-open-reader"></i> Apprendre le Français</a>
+        <a href="exercice.html"><i class="fas fa-graduation-cap"></i> Pratique</a>
+        <a href="livre.html"><i class="fas fa-book"></i>Guide premium <i class="fas fa-crown"></i></a>
+        <a href="matiere.html"><i class="fas fa-list"></i>Matiere</a>
+        <a href=""><i class="fas fa-share-alt"></i>Partager</a>
+        <a href=""><i class="fab fa-whatsapp"></i>Nous contacter</a>
+    </nav>
+</header>
+
+<div class="onglet-langue">
+    <div class="barre-recherche">
+        <input type="search" placeholder="Rechercher..." id="searchCours">
+        <a href="exercicefr.html?niveau=fr_debutant" id="lienPratiqueFr" class="lien-pratique">
+            <i class="fas fa-graduation-cap"></i> S'exercer sur ce niveau
+        </a>
+    </div>
+    <div class="onglet-langue-contour">
+        <button class="btn-onglet-langue" id="btn-fab-fr"><i class="fas fa-plus"></i> <span class="fab-text">Modules</span></button>
+        <button class="btn-onglet-langue active" data-target="fr-debutant,moduleFrDebutant">Débutant</button>
+        <button class="btn-onglet-langue" data-target="fr-intermediaire,moduleFrIntermediaire">Intermédiaire</button>
+        <button class="btn-onglet-langue" data-target="fr-avance,moduleFrAvance">Avancé</button>
+        <button class="btn-onglet-langue" data-target="fr-professionnel,moduleFrProfessionnel">Professionnel</button>
+    </div>
+</div>
+
+<main>
+<div class="conteneur-parent-cours">
+
+<!-- ================= NIVEAU DÉBUTANT ================= -->
+<div class="contenu-cours" id="fr-debutant">
+
+    <div class="coursModule active" id="fr-art-definis">
+        <h2>Les articles définis et indéfinis</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>articles</strong> sont de petits mots placés devant le nom. Ils indiquent si le nom est <strong>défini</strong> (connu, précis) ou <strong>indéfini</strong> (non précisé).</p>
+        <p>En français, les articles s'accordent en <strong>genre</strong> (masculin/féminin) et en <strong>nombre</strong> (singulier/pluriel) avec le nom qu'ils déterminent.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Article</th><th>Genre / Nombre</th><th>Exemple</th></tr>
+            <tr><td>le</td><td>masculin singulier</td><td>le livre</td></tr>
+            <tr><td>la</td><td>féminin singulier</td><td>la table</td></tr>
+            <tr><td>l'</td><td>devant voyelle ou h muet</td><td>l'ami, l'heure</td></tr>
+            <tr><td>les</td><td>pluriel</td><td>les enfants</td></tr>
+            <tr><td>un</td><td>masculin singulier indéfini</td><td>un chat</td></tr>
+            <tr><td>une</td><td>féminin singulier indéfini</td><td>une fleur</td></tr>
+            <tr><td>des</td><td>pluriel indéfini</td><td>des amis</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Le soleil brille.</em> — Article défini masculin singulier.</p>
+        <p><em>La lune est belle.</em> — Article défini féminin singulier.</p>
+        <p><em>L'enfant joue.</em> — Article défini élidé devant voyelle.</p>
+        <p><em>Les fleurs sont belles.</em> — Article défini pluriel.</p>
+        <p><em>Un chien aboie.</em> — Article indéfini masculin.</p>
+        <p><em>Une voiture passe.</em> — Article indéfini féminin.</p>
+        <p><em>Des oiseaux chantent.</em> — Article indéfini pluriel.</p>
+        <p><em>J'ai vu un film et une pièce.</em> — Deux articles indéfinis.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Défini : le, la, l', les (nom connu). Indéfini : un, une, des (nom non précisé).</p>
+    </div>
+
+    <div class="coursModule" id="fr-art-partitifs">
+        <h2>Les articles partitifs</h2>
+        <h3>Définition</h3>
+        <p>L'<strong>article partitif</strong> exprime une <strong>quantité indéterminée</strong>, une partie d'un tout. Il s'emploie devant les noms <strong>non comptables</strong> (aliments, matières, abstractions).</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Article</th><th>Emploi</th><th>Exemple</th></tr>
+            <tr><td>du</td><td>masculin singulier</td><td>du pain</td></tr>
+            <tr><td>de la</td><td>féminin singulier</td><td>de la confiture</td></tr>
+            <tr><td>de l'</td><td>devant voyelle ou h muet</td><td>de l'eau, de l'huile</td></tr>
+            <tr><td>des</td><td>pluriel</td><td>des légumes</td></tr>
+        </table>
+        <p>À la forme négative, les articles partitifs deviennent <strong>de</strong> ou <strong>d'</strong> : <em>Je ne veux pas de pain.</em></p>
+
+        <h3>Exemples</h3>
+        <p><em>Je mange du pain.</em> — Partitif masculin.</p>
+        <p><em>Elle boit de la limonade.</em> — Partitif féminin.</p>
+        <p><em>Il faut de l'eau.</em> — Partitif élidé.</p>
+        <p><em>Nous avons des légumes.</em> — Partitif pluriel.</p>
+        <p><em>Je ne bois pas de café.</em> — Négation : de.</p>
+        <p><em>Il n'y a plus d'argent.</em> — Négation : d'.</p>
+        <p><em>Veux-tu du thé ?</em> — Partitif dans une question.</p>
+        <p><em>J'ai acheté de la farine et du sucre.</em> — Deux partitifs.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Affirmation : du, de la, de l', des. Négation : de, d'.</p>
+    </div>
+
+    <div class="coursModule" id="fr-art-contractes">
+        <h2>Les articles contractés</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>articles contractés</strong> résultent de la contraction d'une préposition (<strong>à</strong> ou <strong>de</strong>) avec un article défini (<strong>le</strong>, <strong>les</strong>).</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Contraction</th><th>Résultat</th><th>Exemple</th></tr>
+            <tr><td>à + le</td><td>au</td><td>Je vais au marché.</td></tr>
+            <tr><td>à + les</td><td>aux</td><td>Je parle aux enfants.</td></tr>
+            <tr><td>de + le</td><td>du</td><td>Le livre du professeur.</td></tr>
+            <tr><td>de + les</td><td>des</td><td>Les livres des élèves.</td></tr>
+        </table>
+        <p><strong>Attention :</strong> <em>à la</em> et <em>de la</em> ne se contractent pas.</p>
+
+        <h3>Exemples</h3>
+        <p><em>Je vais au cinéma.</em> — à + le = au.</p>
+        <p><em>Elle parle aux voisins.</em> — à + les = aux.</p>
+        <p><em>C'est la voiture du directeur.</em> — de + le = du.</p>
+        <p><em>Les cahiers des étudiants.</em> — de + les = des.</p>
+        <p><em>Je pense à la solution.</em> — à la ne se contracte pas.</p>
+        <p><em>Il parle de la réunion.</em> — de la ne se contracte pas.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>à + le = au — à + les = aux — de + le = du — de + les = des.</p>
+    </div>
+
+    <div class="coursModule" id="fr-det-possessifs">
+        <h2>Les déterminants possessifs</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>déterminants possessifs</strong> indiquent à qui appartient l'être ou la chose désignée par le nom. Ils s'accordent en <strong>genre</strong> et en <strong>nombre</strong> avec le nom.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Masculin sing.</th><th>Féminin sing.</th><th>Pluriel</th></tr>
+            <tr><td>1re sing.</td><td>mon</td><td>ma</td><td>mes</td></tr>
+            <tr><td>2e sing.</td><td>ton</td><td>ta</td><td>tes</td></tr>
+            <tr><td>3e sing.</td><td>son</td><td>sa</td><td>ses</td></tr>
+            <tr><td>1re plur.</td><td>notre</td><td>notre</td><td>nos</td></tr>
+            <tr><td>2e plur.</td><td>votre</td><td>votre</td><td>vos</td></tr>
+            <tr><td>3e plur.</td><td>leur</td><td>leur</td><td>leurs</td></tr>
+        </table>
+        <p><strong>Attention :</strong> devant un nom féminin commençant par une voyelle ou un h muet, on emploie <strong>mon, ton, son</strong> : <em>mon amie, ton école, son histoire</em>.</p>
+
+        <h3>Exemples</h3>
+        <p><em>Mon livre est neuf.</em> — Masculin singulier.</p>
+        <p><em>Ma voiture est rouge.</em> — Féminin singulier.</p>
+        <p><em>Mes clés sont sur la table.</em> — Pluriel.</p>
+        <p><em>Ton frère est sympa.</em> — 2e personne.</p>
+        <p><em>Sa maison est grande.</em> — 3e personne.</p>
+        <p><em>Notre projet avance.</em> — 1re personne pluriel.</p>
+        <p><em>Mon amie est arrivée.</em> — Mon devant voyelle.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>mon/ma/mes — ton/ta/tes — son/sa/ses — notre/nos — votre/vos — leur/leurs.</p>
+    </div>
+
+    <div class="coursModule" id="fr-det-demonstratifs">
+        <h2>Les déterminants démonstratifs</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>déterminants démonstratifs</strong> désignent une personne ou une chose en la montrant. Ils s'accordent en genre et en nombre avec le nom.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Genre / Nombre</th><th>Forme simple</th><th>Forme avec -ci / -là</th></tr>
+            <tr><td>Masculin singulier</td><td>ce</td><td>ce livre-ci / ce livre-là</td></tr>
+            <tr><td>Masculin devant voyelle</td><td>cet</td><td>cet arbre-ci</td></tr>
+            <tr><td>Féminin singulier</td><td>cette</td><td>cette fleur-ci / cette fleur-là</td></tr>
+            <tr><td>Pluriel</td><td>ces</td><td>ces livres-ci / ces livres-là</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Ce garçon est mon ami.</em> — Masculin singulier.</p>
+        <p><em>Cet homme est grand.</em> — Devant voyelle.</p>
+        <p><em>Cette femme est médecin.</em> — Féminin singulier.</p>
+        <p><em>Ces enfants jouent.</em> — Pluriel.</p>
+        <p><em>Ce livre-ci est intéressant.</em> — Proche.</p>
+        <p><em>Ce livre-là est ennuyeux.</em> — Éloigné.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>ce / cet / cette / ces. -ci = proche, -là = éloigné.</p>
+    </div>
+
+    <div class="coursModule" id="fr-det-indefinis">
+        <h2>Les déterminants indéfinis</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>déterminants indéfinis</strong> expriment une quantité ou une identité imprécise.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Déterminant</th><th>Sens</th><th>Exemple</th></tr>
+            <tr><td>quelques</td><td>petite quantité</td><td>quelques amis</td></tr>
+            <tr><td>plusieurs</td><td>quantité moyenne</td><td>plusieurs livres</td></tr>
+            <tr><td>certains / certaines</td><td>non précisé</td><td>certains élèves</td></tr>
+            <tr><td>chaque</td><td>singulier distributif</td><td>chaque jour</td></tr>
+            <tr><td>tout / toute / tous / toutes</td><td>totalité</td><td>tout le monde</td></tr>
+            <tr><td>aucun / aucune</td><td>négation</td><td>aucun problème</td></tr>
+            <tr><td>même</td><td>identité</td><td>le même jour</td></tr>
+            <tr><td>autre</td><td>différence</td><td>un autre livre</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>J'ai quelques questions.</em> — Petite quantité.</p>
+        <p><em>Plusieurs personnes sont venues.</em> — Quantité moyenne.</p>
+        <p><em>Certains étudiants ont réussi.</em> — Non précisé.</p>
+        <p><em>Chaque matin, je cours.</em> — Distributif.</p>
+        <p><em>Tout le monde est là.</em> — Totalité.</p>
+        <p><em>Aucun bruit ne troublait le silence.</em> — Négation.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>quelques, plusieurs, certains, chaque, tout, aucun, même, autre.</p>
+    </div>
+
+    <div class="coursModule" id="fr-det-numeraux">
+        <h2>Les déterminants numéraux</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>déterminants numéraux</strong> indiquent un nombre précis. Ils sont <strong>invariables</strong>, sauf <em>vingt</em> et <em>cent</em> dans certains cas.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Nombre</th><th>Écriture</th><th>Remarque</th></tr>
+            <tr><td>21</td><td>vingt et un</td><td>« et » entre vingt et un</td></tr>
+            <tr><td>22</td><td>vingt-deux</td><td>trait d'union</td></tr>
+            <tr><td>80</td><td>quatre-vingts</td><td>« s » si rien après</td></tr>
+            <tr><td>81</td><td>quatre-vingt-un</td><td>pas de « s »</td></tr>
+            <tr><td>100</td><td>cent</td><td>invariable</td></tr>
+            <tr><td>200</td><td>deux cents</td><td>« s » si rien après</td></tr>
+            <tr><td>201</td><td>deux cent un</td><td>pas de « s »</td></tr>
+            <tr><td>1000</td><td>mille</td><td>invariable</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>J'ai vingt et un ans.</em> — « et » entre vingt et un.</p>
+        <p><em>Il y a vingt-deux élèves.</em> — Trait d'union.</p>
+        <p><em>Quatre-vingts personnes sont venues.</em> — « s » à quatre-vingts.</p>
+        <p><em>Quatre-vingt-un livres.</em> — Pas de « s ».</p>
+        <p><em>Deux cents voitures.</em> — « s » à cents.</p>
+        <p><em>Mille mercis.</em> — Mille invariable.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>vingt et un, quatre-vingts, deux cents, mille invariable.</p>
+    </div>
+
+    <div class="coursModule" id="fr-det-interrogatifs">
+        <h2>Les déterminants interrogatifs et exclamatifs</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>déterminants interrogatifs</strong> servent à poser une question ; les <strong>exclamatifs</strong> expriment un sentiment intense.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Type</th><th>Formes</th><th>Exemple</th></tr>
+            <tr><td>Interrogatif</td><td>quel, quelle, quels, quelles</td><td>Quel livre veux-tu ?</td></tr>
+            <tr><td>Exclamatif</td><td>quel, quelle, quels, quelles</td><td>Quel beau paysage !</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Quel est ton nom ?</em> — Interrogatif masculin singulier.</p>
+        <p><em>Quelle heure est-il ?</em> — Interrogatif féminin singulier.</p>
+        <p><em>Quels livres as-tu lus ?</em> — Interrogatif masculin pluriel.</p>
+        <p><em>Quelles fleurs préfères-tu ?</em> — Interrogatif féminin pluriel.</p>
+        <p><em>Quel beau spectacle !</em> — Exclamatif masculin.</p>
+        <p><em>Quelle joie !</em> — Exclamatif féminin.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>quel / quelle / quels / quelles : interrogatif et exclamatif.</p>
+    </div>
+
+    <div class="coursModule" id="fr-noms-genre">
+        <h2>Le genre des noms</h2>
+        <h3>Définition</h3>
+        <p>En français, tout nom a un <strong>genre</strong> : masculin ou féminin. Le genre est souvent arbitraire et doit être mémorisé.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Terminaison</th><th>Genre habituel</th><th>Exemple</th></tr>
+            <tr><td>-age</td><td>masculin</td><td>le village</td></tr>
+            <tr><td>-ment</td><td>masculin</td><td>le gouvernement</td></tr>
+            <tr><td>-eau</td><td>masculin</td><td>le bateau</td></tr>
+            <tr><td>-tion</td><td>féminin</td><td>la nation</td></tr>
+            <tr><td>-té</td><td>féminin</td><td>la liberté</td></tr>
+            <tr><td>-ette</td><td>féminin</td><td>la fourchette</td></tr>
+            <tr><td>-ure</td><td>féminin</td><td>la culture</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Le village est calme.</em> — -age : masculin.</p>
+        <p><em>Le mouvement est lent.</em> — -ment : masculin.</p>
+        <p><em>Le château est vieux.</em> — -eau : masculin.</p>
+        <p><em>La nation est fière.</em> — -tion : féminin.</p>
+        <p><em>La beauté est rare.</em> — -té : féminin.</p>
+        <p><em>La baguette est fraîche.</em> — -ette : féminin.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>-age, -ment, -eau : masculin. -tion, -té, -ette, -ure : féminin.</p>
+    </div>
+
+    <div class="coursModule" id="fr-noms-nombre">
+        <h2>Le nombre des noms</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>nombre</strong> indique si le nom est au <strong>singulier</strong> (un seul) ou au <strong>pluriel</strong> (plusieurs). Le pluriel se marque généralement par un <strong>-s</strong>.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Règle</th><th>Exemple</th></tr>
+            <tr><td>+ s</td><td>un livre → des livres</td></tr>
+            <tr><td>-s, -x, -z : invariable</td><td>un nez → des nez</td></tr>
+            <tr><td>-al → aux</td><td>un cheval → des chevaux</td></tr>
+            <tr><td>-eau → eaux</td><td>un bateau → des bateaux</td></tr>
+            <tr><td>-eu → eux</td><td>un jeu → des jeux</td></tr>
+            <tr><td>-ou → ous (sauf 7)</td><td>un trou → des trous</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Un livre, des livres.</em> — Pluriel régulier.</p>
+        <p><em>Un nez, des nez.</em> — Invariable en -z.</p>
+        <p><em>Un cheval, des chevaux.</em> — -al → aux.</p>
+        <p><em>Un bateau, des bateaux.</em> — -eau → eaux.</p>
+        <p><em>Un jeu, des jeux.</em> — -eu → eux.</p>
+        <p><em>Un oeil, des yeux.</em> — Pluriel irrégulier.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>+s, -aux, -eaux, -eux. Exceptions : bijoux, travaux, yeux, cieux.</p>
+    </div>
+
+    <div class="coursModule" id="fr-noms-composes">
+        <h2>Les noms composés</h2>
+        <h3>Définition</h3>
+        <p>Un <strong>nom composé</strong> est formé de plusieurs mots. Seuls certains éléments prennent la marque du pluriel.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Structure</th><th>Pluriel</th><th>Exemple</th></tr>
+            <tr><td>Nom + nom</td><td>les deux</td><td>un chou-fleur → des choux-fleurs</td></tr>
+            <tr><td>Nom + adjectif</td><td>les deux</td><td>un grand-père → des grands-pères</td></tr>
+            <tr><td>Verbe + nom</td><td>nom seul</td><td>un porte-monnaie → des porte-monnaie</td></tr>
+            <tr><td>Préposition + nom</td><td>nom seul</td><td>un arc-en-ciel → des arcs-en-ciel</td></tr>
+            <tr><td>Verbe + verbe</td><td>invariable</td><td>un va-et-vient → des va-et-vient</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Un chou-fleur, des choux-fleurs.</em> — Nom + nom.</p>
+        <p><em>Un grand-père, des grands-pères.</em> — Nom + adjectif.</p>
+        <p><em>Un porte-monnaie, des porte-monnaie.</em> — Verbe + nom.</p>
+        <p><em>Un arc-en-ciel, des arcs-en-ciel.</em> — Préposition + nom.</p>
+        <p><em>Un va-et-vient, des va-et-vient.</em> — Invariable.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Nom + nom : les deux. Verbe + nom : nom seul. Verbe + verbe : invariable.</p>
+    </div>
+
+    <div class="coursModule" id="fr-adj-qualificatifs">
+        <h2>Les adjectifs qualificatifs</h2>
+        <h3>Définition</h3>
+        <p>L'<strong>adjectif qualificatif</strong> exprime une qualité du nom. Il s'accorde en <strong>genre</strong> et en <strong>nombre</strong> avec le nom qu'il qualifie.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Règle</th><th>Masculin</th><th>Féminin</th><th>Pluriel</th></tr>
+            <tr><td>+ e</td><td>grand</td><td>grande</td><td>grands / grandes</td></tr>
+            <tr><td>+ e + s</td><td>petit</td><td>petite</td><td>petits / petites</td></tr>
+            <tr><td>-eux → euse</td><td>heureux</td><td>heureuse</td><td>heureux / heureuses</td></tr>
+            <tr><td>-f → ve</td><td>actif</td><td>active</td><td>actifs / actives</td></tr>
+            <tr><td>-er → ère</td><td>premier</td><td>première</td><td>premiers / premières</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Un grand garçon, une grande fille.</em> — Accord en genre.</p>
+        <p><em>Des petits chats, des petites chattes.</em> — Accord en nombre.</p>
+        <p><em>Un homme heureux, une femme heureuse.</em> — -eux → euse.</p>
+        <p><em>Un sportif actif, une sportive active.</em> — -f → ve.</p>
+        <p><em>Le premier jour, la première fois.</em> — -er → ère.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Accord en genre et en nombre. Exceptions : beau/belle, vieux/vieille, nouveau/nouvelle.</p>
+    </div>
+
+    <div class="coursModule" id="fr-adj-place">
+        <h2>La place de l'adjectif</h2>
+        <h3>Définition</h3>
+        <p>En français, l'adjectif se place généralement <strong>après le nom</strong>, mais certains adjectifs courts et fréquents se placent <strong>avant</strong>.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Place</th><th>Adjectifs concernés</th><th>Exemple</th></tr>
+            <tr><td>Avant le nom</td><td>beau, joli, jeune, vieux, grand, petit, bon, mauvais, nouveau, gros, long, court</td><td>un beau jardin</td></tr>
+            <tr><td>Après le nom</td><td>couleurs, formes, nationalités, participes</td><td>une voiture rouge</td></tr>
+            <tr><td>Les deux</td><td>changement de sens</td><td>un grand homme / un homme grand</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Un beau jardin.</em> — Avant le nom.</p>
+        <p><em>Une voiture rouge.</em> — Après le nom (couleur).</p>
+        <p><em>Un grand homme.</em> — Grand = célèbre.</p>
+        <p><em>Un homme grand.</em> — Grand = taille.</p>
+        <p><em>Un pauvre homme.</em> — Pauvre = malheureux.</p>
+        <p><em>Un homme pauvre.</em> — Pauvre = sans argent.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Adjectifs courts avant le nom. Couleurs et participes après. Changement de sens possible.</p>
+    </div>
+
+    <div class="coursModule" id="fr-pronoms-personnels">
+        <h2>Les pronoms personnels</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>pronoms personnels</strong> remplacent un nom. Ils varient selon leur <strong>fonction</strong> (sujet, objet direct, objet indirect) et leur <strong>personne</strong>.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Sujet</th><th>Objet direct</th><th>Objet indirect</th></tr>
+            <tr><td>1re sing.</td><td>je</td><td>me</td><td>me</td></tr>
+            <tr><td>2e sing.</td><td>tu</td><td>te</td><td>te</td></tr>
+            <tr><td>3e sing. masc.</td><td>il</td><td>le</td><td>lui</td></tr>
+            <tr><td>3e sing. fém.</td><td>elle</td><td>la</td><td>lui</td></tr>
+            <tr><td>1re plur.</td><td>nous</td><td>nous</td><td>nous</td></tr>
+            <tr><td>2e plur.</td><td>vous</td><td>vous</td><td>vous</td></tr>
+            <tr><td>3e plur.</td><td>ils / elles</td><td>les</td><td>leur</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je mange une pomme.</em> — Sujet.</p>
+        <p><em>Je la mange.</em> — Objet direct.</p>
+        <p><em>Je lui parle.</em> — Objet indirect.</p>
+        <p><em>Il nous aide.</em> — Objet direct 1re pluriel.</p>
+        <p><em>Elle vous écrit.</em> — Objet indirect 2e pluriel.</p>
+        <p><em>Ils les voient.</em> — Objet direct 3e pluriel.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>je/tu/il/elle/nous/vous/ils/elles — me/te/le/la/nous/vous/les — me/te/lui/nous/vous/leur.</p>
+    </div>
+
+    <div class="coursModule" id="fr-pronoms-possessifs">
+        <h2>Les pronoms possessifs</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>pronom possessif</strong> remplace un nom précédé d'un déterminant possessif.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Masc. sing.</th><th>Fém. sing.</th><th>Masc. plur.</th><th>Fém. plur.</th></tr>
+            <tr><td>1re sing.</td><td>le mien</td><td>la mienne</td><td>les miens</td><td>les miennes</td></tr>
+            <tr><td>2e sing.</td><td>le tien</td><td>la tienne</td><td>les tiens</td><td>les tiennes</td></tr>
+            <tr><td>3e sing.</td><td>le sien</td><td>la sienne</td><td>les siens</td><td>les siennes</td></tr>
+            <tr><td>1re plur.</td><td>le nôtre</td><td>la nôtre</td><td>les nôtres</td><td>les nôtres</td></tr>
+            <tr><td>2e plur.</td><td>le vôtre</td><td>la vôtre</td><td>les vôtres</td><td>les vôtres</td></tr>
+            <tr><td>3e plur.</td><td>le leur</td><td>la leur</td><td>les leurs</td><td>les leurs</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Ce livre est le mien.</em> — 1re singulier masculin.</p>
+        <p><em>Cette voiture est la tienne.</em> — 2e singulier féminin.</p>
+        <p><em>Ces clés sont les siennes.</em> — 3e singulier pluriel.</p>
+        <p><em>Votre maison est plus grande que la nôtre.</em> — 1re pluriel.</p>
+        <p><em>Mes idées sont meilleures que les vôtres.</em> — 2e pluriel.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>le mien/la mienne — le tien/la tienne — le sien/la sienne — le nôtre/la nôtre — le vôtre/la vôtre — le leur/la leur.</p>
+    </div>
+
+    <div class="coursModule" id="fr-pronoms-demonstratifs">
+        <h2>Les pronoms démonstratifs</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>pronom démonstratif</strong> remplace un nom précédé d'un déterminant démonstratif.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Genre / Nombre</th><th>Forme simple</th><th>Forme composée</th></tr>
+            <tr><td>Masculin singulier</td><td>celui</td><td>celui-ci / celui-là</td></tr>
+            <tr><td>Féminin singulier</td><td>celle</td><td>celle-ci / celle-là</td></tr>
+            <tr><td>Masculin pluriel</td><td>ceux</td><td>ceux-ci / ceux-là</td></tr>
+            <tr><td>Féminin pluriel</td><td>celles</td><td>celles-ci / celles-là</td></tr>
+            <tr><td>Neutre</td><td>ce / c'</td><td>ceci / cela / ça</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je préfère celui-ci.</em> — Masculin singulier proche.</p>
+        <p><em>Elle a choisi celle-là.</em> — Féminin singulier éloigné.</p>
+        <p><em>Ceux qui travaillent réussissent.</em> — Masculin pluriel.</p>
+        <p><em>Celles-ci sont plus belles.</em> — Féminin pluriel proche.</p>
+        <p><em>Ce que tu dis est vrai.</em> — Neutre.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>celui/celle/ceux/celles. -ci = proche, -là = éloigné. ce/c' neutre.</p>
+    </div>
+
+    <div class="coursModule" id="fr-pronoms-relatifs">
+        <h2>Les pronoms relatifs</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>pronom relatif</strong> introduit une proposition relative qui complète un antécédent.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Pronom</th><th>Fonction</th><th>Exemple</th></tr>
+            <tr><td>qui</td><td>sujet</td><td>L'homme qui parle est mon père.</td></tr>
+            <tr><td>que</td><td>objet direct</td><td>Le livre que je lis est passionnant.</td></tr>
+            <tr><td>dont</td><td>complément de nom ou de verbe</td><td>Le film dont je parle est récent.</td></tr>
+            <tr><td>où</td><td>lieu ou temps</td><td>La ville où je vis est belle.</td></tr>
+            <tr><td>lequel / laquelle</td><td>après préposition</td><td>La table sur laquelle je pose mon livre.</td></tr>
+            <tr><td>auquel / à laquelle</td><td>à + lequel</td><td>L'ami auquel je pense.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>L'homme qui parle est mon père.</em> — Sujet.</p>
+        <p><em>Le livre que je lis est passionnant.</em> — Objet direct.</p>
+        <p><em>Le film dont je parle est récent.</em> — Complément de nom.</p>
+        <p><em>La ville où je vis est belle.</em> — Lieu.</p>
+        <p><em>La table sur laquelle je pose mon livre.</em> — Préposition + lequel.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>qui (sujet), que (objet), dont (complément), où (lieu/temps), lequel (préposition).</p>
+    </div>
+
+    <div class="coursModule" id="fr-pronoms-indefinis">
+        <h2>Les pronoms indéfinis</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>pronom indéfini</strong> désigne une personne ou une chose de manière imprécise.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Pronom</th><th>Sens</th><th>Exemple</th></tr>
+            <tr><td>quelqu'un</td><td>une personne</td><td>Quelqu'un a frappé.</td></tr>
+            <tr><td>personne</td><td>aucune personne</td><td>Personne n'est venu.</td></tr>
+            <tr><td>quelque chose</td><td>une chose</td><td>J'ai quelque chose à dire.</td></tr>
+            <tr><td>rien</td><td>aucune chose</td><td>Il n'a rien dit.</td></tr>
+            <tr><td>chacun</td><td>tous séparément</td><td>Chacun a son tour.</td></tr>
+            <tr><td>plusieurs</td><td>un certain nombre</td><td>Plusieurs sont partis.</td></tr>
+            <tr><td>certains</td><td>quelques-uns</td><td>Certains aiment le sport.</td></tr>
+            <tr><td>tous</td><td>totalité</td><td>Tous sont arrivés.</td></tr>
+            <tr><td>aucun</td><td>pas un seul</td><td>Aucun n'a répondu.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Quelqu'un a frappé à la porte.</em> — Une personne.</p>
+        <p><em>Personne n'est venu.</em> — Aucune personne.</p>
+        <p><em>J'ai quelque chose à dire.</em> — Une chose.</p>
+        <p><em>Il n'a rien dit.</em> — Aucune chose.</p>
+        <p><em>Chacun a son tour.</em> — Tous séparément.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>quelqu'un, personne, quelque chose, rien, chacun, plusieurs, certains, tous, aucun.</p>
+    </div>
+
+    <div class="coursModule" id="fr-verbes-generalites">
+        <h2>Les verbes : généralités</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>verbe</strong> exprime une action ou un état. Il se conjugue en <strong>personne</strong>, <strong>nombre</strong>, <strong>temps</strong> et <strong>mode</strong>.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Groupe</th><th>Terminaison</th><th>Exemple</th></tr>
+            <tr><td>1er groupe</td><td>-er</td><td>parler</td></tr>
+            <tr><td>2e groupe</td><td>-ir (verbes réguliers)</td><td>finir</td></tr>
+            <tr><td>3e groupe</td><td>irréguliers</td><td>être, avoir, aller, faire</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je parle français.</em> — 1er groupe.</p>
+        <p><em>Tu finis tes devoirs.</em> — 2e groupe.</p>
+        <p><em>Il est content.</em> — 3e groupe (être).</p>
+        <p><em>Nous avons un chat.</em> — 3e groupe (avoir).</p>
+        <p><em>Elle va à l'école.</em> — 3e groupe (aller).</p>
+
+        <h3>Récapitulatif</h3>
+        <p>1er groupe : -er. 2e groupe : -ir. 3e groupe : irréguliers.</p>
+    </div>
+
+    <div class="coursModule" id="fr-verbes-present">
+        <h2>Le présent de l'indicatif</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>présent de l'indicatif</strong> exprime une action qui se déroule au moment où l'on parle, une habitude ou une vérité générale.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Parler (1er gr.)</th><th>Finir (2e gr.)</th><th>Prendre (3e gr.)</th></tr>
+            <tr><td>je</td><td>parle</td><td>finis</td><td>prends</td></tr>
+            <tr><td>tu</td><td>parles</td><td>finis</td><td>prends</td></tr>
+            <tr><td>il / elle</td><td>parle</td><td>finis</td><td>prend</td></tr>
+            <tr><td>nous</td><td>parlons</td><td>finissons</td><td>prenons</td></tr>
+            <tr><td>vous</td><td>parlez</td><td>finissez</td><td>prenez</td></tr>
+            <tr><td>ils / elles</td><td>parlent</td><td>finissent</td><td>prennent</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je parle français.</em> — 1er groupe.</p>
+        <p><em>Tu finis ton travail.</em> — 2e groupe.</p>
+        <p><em>Il prend le train.</em> — 3e groupe.</p>
+        <p><em>Le soleil brille.</em> — Vérité générale.</p>
+        <p><em>Il travaille tous les jours.</em> — Habitude.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>1er groupe : -e, -es, -e, -ons, -ez, -ent. 2e groupe : -is, -is, -it, -issons, -issez, -issent.</p>
+    </div>
+
+    <div class="coursModule" id="fr-verbes-passe-compose">
+        <h2>Le passé composé</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>passé composé</strong> exprime une action passée terminée. Il se forme avec l'auxiliaire <strong>avoir</strong> ou <strong>être</strong> au présent, suivi du <strong>participe passé</strong>.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Auxiliaire</th><th>Emploi</th><th>Exemple</th></tr>
+            <tr><td>avoir</td><td>la plupart des verbes</td><td>J'ai mangé.</td></tr>
+            <tr><td>être</td><td>verbes de mouvement et pronominaux</td><td>Je suis allé. Je me suis levé.</td></tr>
+        </table>
+        <p>Avec <strong>être</strong>, le participe passé s'accorde en genre et en nombre avec le sujet.</p>
+
+        <h3>Exemples</h3>
+        <p><em>J'ai mangé une pomme.</em> — Auxiliaire avoir.</p>
+        <p><em>Tu as fini.</em> — Auxiliaire avoir.</p>
+        <p><em>Il est allé au marché.</em> — Auxiliaire être.</p>
+        <p><em>Elle est partie.</em> — Accord avec être.</p>
+        <p><em>Ils sont arrivés.</em> — Accord avec être.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>avoir ou être + participe passé. Accord avec être.</p>
+    </div>
+
+    <div class="coursModule" id="fr-verbes-imparfait">
+        <h2>L'imparfait de l'indicatif</h2>
+        <h3>Définition</h3>
+        <p>L'<strong>imparfait</strong> exprime une action passée en cours, une habitude passée ou une description.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Parler</th><th>Finir</th><th>Prendre</th></tr>
+            <tr><td>je</td><td>parlais</td><td>finissais</td><td>prenais</td></tr>
+            <tr><td>tu</td><td>parlais</td><td>finissais</td><td>prenais</td></tr>
+            <tr><td>il / elle</td><td>parlait</td><td>finissait</td><td>prenait</td></tr>
+            <tr><td>nous</td><td>parlions</td><td>finissions</td><td>prenions</td></tr>
+            <tr><td>vous</td><td>parliez</td><td>finissiez</td><td>preniez</td></tr>
+            <tr><td>ils / elles</td><td>parlaient</td><td>finissaient</td><td>prenaient</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je parlais souvent à mon voisin.</em> — Habitude passée.</p>
+        <p><em>Il faisait beau ce jour-là.</em> — Description.</p>
+        <p><em>Nous finissions nos devoirs.</em> — Action en cours.</p>
+        <p><em>Je lisais quand il est arrivé.</em> — Action interrompue.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Terminaisons : -ais, -ais, -ait, -ions, -iez, -aient.</p>
+    </div>
+
+    <div class="coursModule" id="fr-verbes-futur">
+        <h2>Le futur simple</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>futur simple</strong> exprime une action à venir.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Parler</th><th>Finir</th><th>Être</th></tr>
+            <tr><td>je</td><td>parlerai</td><td>finirai</td><td>serai</td></tr>
+            <tr><td>tu</td><td>parleras</td><td>finiras</td><td>seras</td></tr>
+            <tr><td>il / elle</td><td>parlera</td><td>finira</td><td>sera</td></tr>
+            <tr><td>nous</td><td>parlerons</td><td>finirons</td><td>serons</td></tr>
+            <tr><td>vous</td><td>parlerez</td><td>finirez</td><td>serez</td></tr>
+            <tr><td>ils / elles</td><td>parleront</td><td>finiront</td><td>seront</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je parlerai français.</em> — 1er groupe.</p>
+        <p><em>Tu finiras bientôt.</em> — 2e groupe.</p>
+        <p><em>Il sera content.</em> — Irrégulier.</p>
+        <p><em>Nous irons au cinéma.</em> — Irrégulier.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Terminaisons : -ai, -as, -a, -ons, -ez, -ont. Irréguliers : être, aller, avoir, faire.</p>
+    </div>
+
+    <div class="coursModule" id="fr-verbes-conditionnel">
+        <h2>Le conditionnel présent</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>conditionnel présent</strong> exprime une action soumise à une condition, une politesse ou un souhait.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Parler</th><th>Finir</th><th>Être</th></tr>
+            <tr><td>je</td><td>parlerais</td><td>finirais</td><td>serais</td></tr>
+            <tr><td>tu</td><td>parlerais</td><td>finirais</td><td>serais</td></tr>
+            <tr><td>il / elle</td><td>parlerait</td><td>finirait</td><td>serait</td></tr>
+            <tr><td>nous</td><td>parlerions</td><td>finirions</td><td>serions</td></tr>
+            <tr><td>vous</td><td>parleriez</td><td>finiriez</td><td>seriez</td></tr>
+            <tr><td>ils / elles</td><td>parleraient</td><td>finiraient</td><td>seraient</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je voudrais un café.</em> — Politesse.</p>
+        <p><em>Si j'étais riche, je voyagerais.</em> — Condition.</p>
+        <p><em>Il aimerait venir.</em> — Souhait.</p>
+        <p><em>Nous pourrions partir.</em> — Suggestion.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Terminaisons : -rais, -rais, -rait, -rions, -riez, -raient.</p>
+    </div>
+
+    <div class="coursModule" id="fr-verbes-imperatif">
+        <h2>L'impératif</h2>
+        <h3>Définition</h3>
+        <p>L'<strong>impératif</strong> exprime un ordre, un conseil ou une instruction. Il ne se conjugue qu'à trois personnes : <strong>tu</strong>, <strong>nous</strong>, <strong>vous</strong>.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Parler</th><th>Finir</th><th>Être</th></tr>
+            <tr><td>tu</td><td>parle</td><td>finis</td><td>sois</td></tr>
+            <tr><td>nous</td><td>parlons</td><td>finissons</td><td>soyons</td></tr>
+            <tr><td>vous</td><td>parlez</td><td>finissez</td><td>soyez</td></tr>
+        </table>
+        <p>À la forme négative : <em>Ne parle pas. Ne finis pas.</em></p>
+
+        <h3>Exemples</h3>
+        <p><em>Parle plus fort.</em> — Ordre à tu.</p>
+        <p><em>Finissons ce travail.</em> — Ordre à nous.</p>
+        <p><em>Parlez lentement.</em> — Conseil à vous.</p>
+        <p><em>Sois prudent.</em> — Être à tu.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>tu, nous, vous. Négation : ne + verbe + pas.</p>
+    </div>
+
+    <div class="coursModule" id="fr-adverbes">
+        <h2>Les adverbes</h2>
+        <h3>Définition</h3>
+        <p>L'<strong>adverbe</strong> modifie un verbe, un adjectif ou un autre adverbe. Il est <strong>invariable</strong>.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Type</th><th>Exemples</th></tr>
+            <tr><td>Manière</td><td>lentement, bien, mal, vite</td></tr>
+            <tr><td>Temps</td><td>hier, aujourd'hui, demain, toujours</td></tr>
+            <tr><td>Lieu</td><td>ici, là, partout, ailleurs</td></tr>
+            <tr><td>Quantité</td><td>beaucoup, peu, trop, assez</td></tr>
+            <tr><td>Affirmation</td><td>oui, certes, vraiment</td></tr>
+            <tr><td>Négation</td><td>non, ne... pas, jamais, rien</td></tr>
+            <tr><td>Doute</td><td>peut-être, sans doute</td></tr>
+        </table>
+        <p>Formation en <strong>-ment</strong> : à partir du féminin de l'adjectif : <em>lent → lente → lentement</em>.</p>
+
+        <h3>Exemples</h3>
+        <p><em>Il court rapidement.</em> — Manière.</p>
+        <p><em>Je viendrai demain.</em> — Temps.</p>
+        <p><em>Elle habite ici.</em> — Lieu.</p>
+        <p><em>Il mange beaucoup.</em> — Quantité.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Manière, temps, lieu, quantité, affirmation, négation, doute. Formation en -ment.</p>
+    </div>
+
+    <div class="coursModule" id="fr-connecteurs-debutant">
+        <h2>Les connecteurs logiques (introduction)</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>connecteurs logiques</strong> relient les idées entre elles. Ils structurent le discours.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Relation</th><th>Connecteurs</th><th>Exemple</th></tr>
+            <tr><td>Addition</td><td>et, aussi, de plus</td><td>Il est grand et fort.</td></tr>
+            <tr><td>Opposition</td><td>mais, cependant</td><td>Il est riche mais avare.</td></tr>
+            <tr><td>Cause</td><td>parce que, car</td><td>Je reste car il pleut.</td></tr>
+            <tr><td>Conséquence</td><td>donc, alors</td><td>Il pleut, donc je reste.</td></tr>
+            <tr><td>But</td><td>pour, afin de</td><td>Je travaille pour réussir.</td></tr>
+            <tr><td>Temps</td><td>quand, lorsque</td><td>Quand il arrive, je pars.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Il est grand et fort.</em> — Addition.</p>
+        <p><em>Il est riche mais avare.</em> — Opposition.</p>
+        <p><em>Je reste car il pleut.</em> — Cause.</p>
+        <p><em>Il pleut, donc je reste.</em> — Conséquence.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Addition, opposition, cause, conséquence, but, temps.</p>
+    </div>
+</div>
+
+<!-- ================= NIVEAU INTERMÉDIAIRE ================= -->
+<div class="contenu-cours" id="fr-intermediaire">
+    <div class="coursModule2 active" id="fr-connecteurs-intermediaire">
+        <h2>Les connecteurs logiques (approfondi)</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>connecteurs logiques</strong> organisent le discours et explicitent les relations entre les idées.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Relation</th><th>Connecteurs</th><th>Exemple</th></tr>
+            <tr><td>Addition</td><td>de plus, en outre, par ailleurs, également</td><td>De plus, il est compétent.</td></tr>
+            <tr><td>Opposition</td><td>cependant, néanmoins, toutefois, en revanche</td><td>Cependant, il refuse.</td></tr>
+            <tr><td>Cause</td><td>parce que, puisque, comme, étant donné que</td><td>Puisqu'il pleut, je reste.</td></tr>
+            <tr><td>Conséquence</td><td>donc, par conséquent, c'est pourquoi, si bien que</td><td>Par conséquent, je reste.</td></tr>
+            <tr><td>But</td><td>pour que, afin que, de peur que</td><td>Je parle fort pour qu'il entende.</td></tr>
+            <tr><td>Condition</td><td>si, à condition que, pourvu que</td><td>Si tu viens, je serai content.</td></tr>
+            <tr><td>Concession</td><td>bien que, quoique, malgré</td><td>Bien qu'il soit tard, il reste.</td></tr>
+            <tr><td>Comparaison</td><td>comme, ainsi que, de même que</td><td>Il est grand comme son père.</td></tr>
+            <tr><td>Illustration</td><td>par exemple, notamment, ainsi</td><td>Par exemple, le français.</td></tr>
+            <tr><td>Conclusion</td><td>en conclusion, en somme, finalement</td><td>En somme, tout va bien.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>De plus, il est compétent.</em> — Addition.</p>
+        <p><em>Cependant, il refuse.</em> — Opposition.</p>
+        <p><em>Puisqu'il pleut, je reste.</em> — Cause.</p>
+        <p><em>Par conséquent, je reste.</em> — Conséquence.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Addition, opposition, cause, conséquence, but, condition, concession, comparaison, illustration, conclusion.</p>
+    </div>
+
+    <div class="coursModule2" id="fr-locutions-intermediaire">
+        <h2>Les locutions</h2>
+        <h3>Définition</h3>
+        <p>Une <strong>locution</strong> est un groupe de mots qui fonctionne comme une unité.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Type</th><th>Exemples</th></tr>
+            <tr><td>Verbale</td><td>avoir besoin de, faire attention, prendre soin</td></tr>
+            <tr><td>Adverbiale</td><td>tout à coup, de temps en temps, peu à peu</td></tr>
+            <tr><td>Prépositive</td><td>à cause de, grâce à, au lieu de</td></tr>
+            <tr><td>Conjonctive</td><td>parce que, bien que, afin que</td></tr>
+            <tr><td>Adjectivale</td><td>plein de vie, en bonne santé</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>J'ai besoin de repos.</em> — Locution verbale.</p>
+        <p><em>Tout à coup, il est parti.</em> — Locution adverbiale.</p>
+        <p><em>À cause de la pluie, je reste.</em> — Locution prépositive.</p>
+        <p><em>Parce qu'il est tard, je rentre.</em> — Locution conjonctive.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Verbale, adverbiale, prépositive, conjonctive, adjectivale.</p>
+    </div>
+
+    <div class="coursModule2" id="fr-langage-soutenu-intermediaire">
+        <h2>Le langage soutenu</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>langage soutenu</strong> est un registre de langue formel.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Langage courant</th><th>Langage soutenu</th></tr>
+            <tr><td>beaucoup</td><td>nombreux, maints</td></tr>
+            <tr><td>voiture</td><td>automobile, véhicule</td></tr>
+            <tr><td>maison</td><td>demeure, résidence</td></tr>
+            <tr><td>manger</td><td>se sustenter, consommer</td></tr>
+            <tr><td>parler</td><td>s'exprimer, discourir</td></tr>
+            <tr><td>regarder</td><td>contempler, observer</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p>Courant : <em>Il y a beaucoup de gens.</em> Soutenu : <em>Il y a de nombreuses personnes.</em></p>
+        <p>Courant : <em>J'ai une belle voiture.</em> Soutenu : <em>Je possède un magnifique véhicule.</em></p>
+        <p>Courant : <em>Il est content.</em> Soutenu : <em>Il est ravi.</em></p>
+
+        <h3>Récapitulatif</h3>
+        <p>Vocabulaire plus riche, syntaxe soignée, tournures impersonnelles.</p>
+    </div>
+
+    <div class="coursModule2" id="fr-temps-composes">
+        <h2>Les temps composés</h2>
+        <h3>Définition</h3>
+        <p>Les <strong>temps composés</strong> se forment avec un auxiliaire (avoir ou être) et un participe passé.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Temps</th><th>Formation</th><th>Exemple</th></tr>
+            <tr><td>Passé composé</td><td>avoir/être au présent + p.p.</td><td>J'ai mangé.</td></tr>
+            <tr><td>Plus-que-parfait</td><td>avoir/être à l'imparfait + p.p.</td><td>J'avais mangé.</td></tr>
+            <tr><td>Passé antérieur</td><td>avoir/être au passé simple + p.p.</td><td>J'eus mangé.</td></tr>
+            <tr><td>Futur antérieur</td><td>avoir/être au futur + p.p.</td><td>J'aurai mangé.</td></tr>
+            <tr><td>Conditionnel passé</td><td>avoir/être au conditionnel + p.p.</td><td>J'aurais mangé.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>J'ai mangé.</em> — Passé composé.</p>
+        <p><em>J'avais mangé.</em> — Plus-que-parfait.</p>
+        <p><em>J'aurai mangé.</em> — Futur antérieur.</p>
+        <p><em>J'aurais mangé.</em> — Conditionnel passé.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Passé composé, plus-que-parfait, passé antérieur, futur antérieur, conditionnel passé.</p>
+    </div>
+
+    <div class="coursModule2" id="fr-accord-participe">
+        <h2>L'accord du participe passé</h2>
+        <h3>Définition</h3>
+        <p>L'accord du <strong>participe passé</strong> dépend de l'auxiliaire utilisé et de la place du complément d'objet direct.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Auxiliaire</th><th>Règle</th><th>Exemple</th></tr>
+            <tr><td>être</td><td>accord avec le sujet</td><td>Elle est partie.</td></tr>
+            <tr><td>avoir</td><td>pas d'accord avec le sujet</td><td>Elle a mangé.</td></tr>
+            <tr><td>avoir + COD avant</td><td>accord avec le COD</td><td>Les fleurs que j'ai cueillies.</td></tr>
+            <tr><td>avoir + COD après</td><td>pas d'accord</td><td>J'ai cueilli des fleurs.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Elle est partie.</em> — Accord avec être.</p>
+        <p><em>Elle a mangé.</em> — Pas d'accord avec avoir.</p>
+        <p><em>Les fleurs que j'ai cueillies.</em> — COD avant : accord.</p>
+        <p><em>J'ai cueilli des fleurs.</em> — COD après : pas d'accord.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Être : accord avec le sujet. Avoir : accord avec le COD placé avant.</p>
+    </div>
+
+    <div class="coursModule2" id="fr-voix-passive">
+        <h2>La voix passive</h2>
+        <h3>Définition</h3>
+        <p>À la <strong>voix passive</strong>, le sujet subit l'action au lieu de la faire.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Voix active</th><th>Voix passive</th></tr>
+            <tr><td>Le chat mange la souris.</td><td>La souris est mangée par le chat.</td></tr>
+            <tr><td>Il a écrit la lettre.</td><td>La lettre a été écrite par lui.</td></tr>
+            <tr><td>On construira la maison.</td><td>La maison sera construite.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>La souris est mangée par le chat.</em> — Présent passif.</p>
+        <p><em>La lettre a été écrite par lui.</em> — Passé composé passif.</p>
+        <p><em>La maison sera construite.</em> — Futur passif.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Être + participe passé + par/de + agent.</p>
+    </div>
+
+    <div class="coursModule2" id="fr-discours-indirect">
+        <h2>Le discours indirect</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>discours indirect</strong> rapporte les paroles de quelqu'un sans les citer directement.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Discours direct</th><th>Discours indirect</th></tr>
+            <tr><td>Il dit : « Je suis content. »</td><td>Il dit qu'il est content.</td></tr>
+            <tr><td>Il a dit : « Je viendrai. »</td><td>Il a dit qu'il viendrait.</td></tr>
+            <tr><td>Elle demande : « Où vas-tu ? »</td><td>Elle demande où je vais.</td></tr>
+            <tr><td>Il demande : « Viens-tu ? »</td><td>Il demande si je viens.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Il dit qu'il est content.</em> — Présent.</p>
+        <p><em>Il a dit qu'il viendrait.</em> — Futur vers conditionnel.</p>
+        <p><em>Elle demande où je vais.</em> — Question indirecte.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Que, si, où, quand, pourquoi... Concordance des temps.</p>
+    </div>
+
+    <div class="coursModule2" id="fr-subjonctif">
+        <h2>Le subjonctif présent</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>subjonctif</strong> exprime une action envisagée, souhaitée, douteuse ou nécessaire.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Personne</th><th>Parler</th><th>Finir</th><th>Être</th><th>Avoir</th></tr>
+            <tr><td>je</td><td>parle</td><td>finisse</td><td>sois</td><td>aie</td></tr>
+            <tr><td>tu</td><td>parles</td><td>finisses</td><td>sois</td><td>aies</td></tr>
+            <tr><td>il / elle</td><td>parle</td><td>finisse</td><td>soit</td><td>ait</td></tr>
+            <tr><td>nous</td><td>parlions</td><td>finissions</td><td>soyons</td><td>ayons</td></tr>
+            <tr><td>vous</td><td>parliez</td><td>finissiez</td><td>soyez</td><td>ayez</td></tr>
+            <tr><td>ils / elles</td><td>parlent</td><td>finissent</td><td>soient</td><td>aient</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je veux que tu viennes.</em> — Volonté.</p>
+        <p><em>Il faut que je parte.</em> — Nécessité.</p>
+        <p><em>Je doute qu'il soit là.</em> — Doute.</p>
+        <p><em>Bien qu'il soit tard, il travaille.</em> — Concession.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Terminaisons : -e, -es, -e, -ions, -iez, -ent.</p>
+    </div>
+</div>
+
+<!-- ================= NIVEAU AVANCÉ ================= -->
+<div class="contenu-cours" id="fr-avance">
+    <div class="coursModule3 active" id="fr-style-avance">
+        <h2>Le style et les registres de langue</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>registre de langue</strong> dépend de la situation de communication.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Registre</th><th>Caractéristiques</th><th>Exemple</th></tr>
+            <tr><td>Familier</td><td>Abréviations, argot</td><td>J'me casse.</td></tr>
+            <tr><td>Courant</td><td>Correct, neutre</td><td>Je m'en vais.</td></tr>
+            <tr><td>Soutenu</td><td>Vocabulaire riche</td><td>Je prends congé.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p>Familier : <em>J'me casse.</em> Courant : <em>Je m'en vais.</em> Soutenu : <em>Je prends congé.</em></p>
+        <p>Familier : <em>C'est vachement bien.</em> Courant : <em>C'est très bien.</em> Soutenu : <em>C'est remarquable.</em></p>
+
+        <h3>Récapitulatif</h3>
+        <p>Familier, courant, soutenu. Adapter le registre à la situation.</p>
+    </div>
+
+    <div class="coursModule3" id="fr-figures-style">
+        <h2>Les figures de style</h2>
+        <h3>Définition</h3>
+        <p>Une <strong>figure de style</strong> est un procédé d'expression qui s'écarte de l'usage ordinaire.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Figure</th><th>Définition</th><th>Exemple</th></tr>
+            <tr><td>Comparaison</td><td>Rapprochement avec comme, tel que</td><td>Fort comme un lion</td></tr>
+            <tr><td>Métaphore</td><td>Comparaison sans outil</td><td>Cet homme est un lion</td></tr>
+            <tr><td>Hyperbole</td><td>Exagération</td><td>Je meurs de faim</td></tr>
+            <tr><td>Litote</td><td>Dire moins pour suggérer plus</td><td>Va, je ne te hais point</td></tr>
+            <tr><td>Euphémisme</td><td>Adoucir une idée brutale</td><td>Il nous a quittés</td></tr>
+            <tr><td>Personnification</td><td>Prêter des traits humains</td><td>Le vent murmure</td></tr>
+            <tr><td>Antithèse</td><td>Opposition de deux idées</td><td>Le jour et la nuit</td></tr>
+            <tr><td>Anaphore</td><td>Répétition en début de phrase</td><td>Moi, je... Moi, je...</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Fort comme un lion.</em> — Comparaison.</p>
+        <p><em>Cet homme est un lion.</em> — Métaphore.</p>
+        <p><em>Je meurs de faim.</em> — Hyperbole.</p>
+        <p><em>Le vent murmure.</em> — Personnification.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Comparaison, métaphore, hyperbole, litote, euphémisme, personnification, antithèse, anaphore.</p>
+    </div>
+
+    <div class="coursModule3" id="fr-phonetique">
+        <h2>La phonétique française</h2>
+        <h3>Définition</h3>
+        <p>La <strong>phonétique</strong> étudie les sons de la langue.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Symbole</th><th>Exemple</th><th>Description</th></tr>
+            <tr><td>/i/</td><td>lit</td><td>i fermé</td></tr>
+            <tr><td>/e/</td><td>été</td><td>é fermé</td></tr>
+            <tr><td>/ɛ/</td><td>père</td><td>è ouvert</td></tr>
+            <tr><td>/a/</td><td>patte</td><td>a antérieur</td></tr>
+            <tr><td>/ɑ/</td><td>pâte</td><td>a postérieur</td></tr>
+            <tr><td>/ɔ/</td><td>port</td><td>o ouvert</td></tr>
+            <tr><td>/o/</td><td>beau</td><td>o fermé</td></tr>
+            <tr><td>/u/</td><td>loup</td><td>ou</td></tr>
+            <tr><td>/y/</td><td>lune</td><td>u français</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Lit</em> : /li/ — Voyelle fermée.</p>
+        <p><em>Été</em> : /ete/ — Deux é fermés.</p>
+        <p><em>Père</em> : /pɛʁ/ — è ouvert.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Voyelles orales et nasales. Consonnes. Semi-voyelles.</p>
+    </div>
+
+    <div class="coursModule3" id="fr-orthographe-avancee">
+        <h2>Les difficultés orthographiques</h2>
+        <h3>Définition</h3>
+        <p>L'<strong>orthographe</strong> française comporte de nombreuses difficultés : homophones, accords, pluriels irréguliers.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Difficulté</th><th>Règle</th><th>Exemple</th></tr>
+            <tr><td>a / à</td><td>a = verbe avoir ; à = préposition</td><td>Il a un livre. / Il va à Paris.</td></tr>
+            <tr><td>ou / où</td><td>ou = choix ; où = lieu</td><td>Ou bien. / Où vas-tu ?</td></tr>
+            <tr><td>et / est</td><td>et = addition ; est = verbe être</td><td>Toi et moi. / Il est là.</td></tr>
+            <tr><td>son / sont</td><td>son = possessif ; sont = verbe être</td><td>Son livre. / Ils sont là.</td></tr>
+            <tr><td>on / ont</td><td>on = pronom ; ont = verbe avoir</td><td>On part. / Ils ont faim.</td></tr>
+            <tr><td>ce / se</td><td>ce = démonstratif ; se = pronom</td><td>Ce livre. / Il se lave.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Il a un livre.</em> — a = verbe avoir.</p>
+        <p><em>Il va à Paris.</em> — à = préposition.</p>
+        <p><em>Toi et moi.</em> — et = addition.</p>
+        <p><em>Il est là.</em> — est = verbe être.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>a/à, ou/où, et/est, son/sont, on/ont, ce/se.</p>
+    </div>
+
+    <div class="coursModule3" id="fr-argumentation">
+        <h2>L'argumentation</h2>
+        <h3>Définition</h3>
+        <p>L'<strong>argumentation</strong> consiste à défendre une thèse à l'aide d'arguments et d'exemples.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Étape</th><th>Rôle</th><th>Connecteurs</th></tr>
+            <tr><td>Introduction</td><td>Présenter le sujet et la thèse</td><td>Tout d'abord, il est vrai que</td></tr>
+            <tr><td>Argument 1</td><td>Premier argument</td><td>Premièrement, en premier lieu</td></tr>
+            <tr><td>Argument 2</td><td>Deuxième argument</td><td>Ensuite, de plus, par ailleurs</td></tr>
+            <tr><td>Argument 3</td><td>Troisième argument</td><td>Enfin, finalement</td></tr>
+            <tr><td>Exemple</td><td>Illustrer</td><td>Par exemple, ainsi, notamment</td></tr>
+            <tr><td>Conclusion</td><td>Résumer et conclure</td><td>En conclusion, en somme</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Tout d'abord, il est vrai que...</em> — Introduction.</p>
+        <p><em>Premièrement, on peut noter que...</em> — Premier argument.</p>
+        <p><em>Par exemple, le cas de...</em> — Exemple.</p>
+        <p><em>En conclusion, on peut dire que...</em> — Conclusion.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Thèse, arguments, exemples, conclusion. Connecteurs logiques.</p>
+    </div>
+
+    <div class="coursModule3" id="fr-langage-soutenu-avance">
+        <h2>Le langage soutenu (approfondi)</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>langage soutenu</strong> se caractérise par un vocabulaire riche, une syntaxe complexe et des tournures impersonnelles.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Procédé</th><th>Exemple</th></tr>
+            <tr><td>Inversion du sujet</td><td>Ainsi parlait-il.</td></tr>
+            <tr><td>Tournure impersonnelle</td><td>Il convient de noter que...</td></tr>
+            <tr><td>Subjonctif</td><td>Quoi qu'il en soit...</td></tr>
+            <tr><td>Vocabulaire rare</td><td>Une félicité sans mélange.</td></tr>
+            <tr><td>Périphrase</td><td>L'astre des nuits pour la lune.</td></tr>
+            <tr><td>Litote</td><td>Ce n'est pas mal.</td></tr>
+            <tr><td>Négation renforcée</td><td>Il ne saurait tarder.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Ainsi parlait-il.</em> — Inversion.</p>
+        <p><em>Il convient de noter que...</em> — Impersonnel.</p>
+        <p><em>Quoi qu'il en soit...</em> — Subjonctif.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Inversion, impersonnel, subjonctif, vocabulaire rare, périphrase, litote.</p>
+    </div>
+</div>
+
+<!-- ================= NIVEAU PROFESSIONNEL ================= -->
+<div class="contenu-cours" id="fr-professionnel">
+    <div class="coursModule1 active" id="fr-pro-redaction">
+        <h2>La rédaction professionnelle</h2>
+        <h3>Définition</h3>
+        <p>La <strong>rédaction professionnelle</strong> regroupe les écrits produits dans un cadre professionnel.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Type</th><th>Caractéristiques</th><th>Formules</th></tr>
+            <tr><td>Courriel</td><td>Objet clair, formule d'appel, corps concis</td><td>Madame, Monsieur, Cordialement</td></tr>
+            <tr><td>Lettre</td><td>En-tête, objet, formule de politesse</td><td>Je vous prie d'agréer...</td></tr>
+            <tr><td>Rapport</td><td>Introduction, développement, conclusion</td><td>Il ressort de cette analyse...</td></tr>
+            <tr><td>Compte rendu</td><td>Ordre du jour, décisions, actions</td><td>Les points suivants ont été abordés...</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Objet : Demande de rendez-vous</em> — Courriel.</p>
+        <p><em>Madame, Monsieur,</em> — Formule d'appel.</p>
+        <p><em>Il ressort de cette analyse que...</em> — Rapport.</p>
+        <p><em>Dans l'attente de votre réponse...</em> — Formule de clôture.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Objet, formule d'appel, corps, formule de politesse, signature.</p>
+    </div>
+
+    <div class="coursModule1" id="fr-pro-courriels">
+        <h2>Les courriels professionnels</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>courriel professionnel</strong> est un message électronique formel.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Partie</th><th>Contenu</th><th>Exemple</th></tr>
+            <tr><td>Objet</td><td>Précis et concis</td><td>Demande de congés</td></tr>
+            <tr><td>Formule d'appel</td><td>Adaptée au destinataire</td><td>Madame, Monsieur,</td></tr>
+            <tr><td>Introduction</td><td>Contexte</td><td>Je me permets de vous écrire...</td></tr>
+            <tr><td>Corps</td><td>Demande ou information</td><td>Je souhaiterais...</td></tr>
+            <tr><td>Clôture</td><td>Formule de politesse</td><td>Cordialement,</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Objet : Demande de congés</em> — Objet clair.</p>
+        <p><em>Madame, Monsieur,</em> — Formule d'appel.</p>
+        <p><em>Je me permets de vous écrire pour...</em> — Introduction.</p>
+        <p><em>Cordialement,</em> — Clôture courante.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Objet, formule d'appel, introduction, corps, clôture, signature.</p>
+    </div>
+
+    <div class="coursModule1" id="fr-pro-rapports">
+        <h2>Les rapports professionnels</h2>
+        <h3>Définition</h3>
+        <p>Un <strong>rapport</strong> est un document structuré qui présente une analyse, des conclusions et des recommandations.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Section</th><th>Contenu</th></tr>
+            <tr><td>Page de titre</td><td>Titre, auteur, date</td></tr>
+            <tr><td>Sommaire</td><td>Plan du rapport</td></tr>
+            <tr><td>Introduction</td><td>Contexte, problématique</td></tr>
+            <tr><td>Développement</td><td>Analyse, données</td></tr>
+            <tr><td>Conclusion</td><td>Synthèse, recommandations</td></tr>
+            <tr><td>Annexes</td><td>Documents complémentaires</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Ce rapport a pour objet d'analyser...</em> — Introduction.</p>
+        <p><em>Les données recueillies montrent que...</em> — Développement.</p>
+        <p><em>Nous recommandons de...</em> — Recommandation.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Page de titre, sommaire, introduction, développement, conclusion, annexes.</p>
+    </div>
+
+    <div class="coursModule1" id="fr-pro-entretiens">
+        <h2>Les entretiens professionnels</h2>
+        <h3>Définition</h3>
+        <p>L'<strong>entretien professionnel</strong> est un échange formel.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Type</th><th>Objectif</th><th>Questions types</th></tr>
+            <tr><td>Embauche</td><td>Évaluer le candidat</td><td>Parlez-moi de vous.</td></tr>
+            <tr><td>Évaluation</td><td>Faire le point</td><td>Quels sont vos objectifs ?</td></tr>
+            <tr><td>Professionnel</td><td>Discuter de l'évolution</td><td>Comment voyez-vous votre avenir ?</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Parlez-moi de vous.</em> — Question classique.</p>
+        <p><em>Quelles sont vos motivations ?</em> — Motivation.</p>
+        <p><em>Où vous voyez-vous dans cinq ans ?</em> — Projection.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Préparation, présentation, compétences, motivation, projection.</p>
+    </div>
+
+    <div class="coursModule1" id="fr-pro-negociation">
+        <h2>La négociation professionnelle</h2>
+        <h3>Définition</h3>
+        <p>La <strong>négociation</strong> est un processus de discussion visant à aboutir à un accord.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Étape</th><th>Formules</th></tr>
+            <tr><td>Proposition</td><td>Nous proposons que...</td></tr>
+            <tr><td>Contre-proposition</td><td>Nous souhaiterions plutôt...</td></tr>
+            <tr><td>Concession</td><td>Nous pouvons accepter à condition que...</td></tr>
+            <tr><td>Accord</td><td>Nous sommes parvenus à un accord.</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Nous proposons un délai de trois mois.</em> — Proposition.</p>
+        <p><em>Nous souhaiterions un délai plus court.</em> — Contre-proposition.</p>
+        <p><em>Nous sommes parvenus à un accord.</em> — Accord.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Proposition, contre-proposition, concession, accord.</p>
+    </div>
+
+    <div class="coursModule1" id="fr-pro-langage-soutenu">
+        <h2>Le langage soutenu professionnel</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>langage soutenu professionnel</strong> est un registre formel adapté au monde de l'entreprise.</p>
+
+        <h3>Règles</h3>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <tr><th>Courant</th><th>Soutenu</th></tr>
+            <tr><td>Envoyer</td><td>Transmettre, adresser</td></tr>
+            <tr><td>Demander</td><td>Solliciter, requérir</td></tr>
+            <tr><td>Dire</td><td>Indiquer, préciser, signaler</td></tr>
+            <tr><td>Faire</td><td>Réaliser, effectuer, mener</td></tr>
+            <tr><td>Voir</td><td>Examiner, étudier, considérer</td></tr>
+            <tr><td>Penser</td><td>Estimer, juger, considérer</td></tr>
+        </table>
+
+        <h3>Exemples</h3>
+        <p><em>Je vous transmets le rapport.</em> — Transmettre.</p>
+        <p><em>Je sollicite votre accord.</em> — Solliciter.</p>
+        <p><em>Nous examinons votre proposition.</em> — Examiner.</p>
+
+        <h3>Récapitulatif</h3>
+        <p>Vocabulaire soutenu, tournures impersonnelles, formules de politesse.</p>
+    </div>
+</div>
+
+</div>
+
+<!-- ================= MENUS LATÉRAUX DES MODULES ================= -->
+<div class="coursModules" id="moduleFrDebutant">
+    <div class="saisiePro"><input type="search" class="searchList" placeholder="Rechercher..."></div>
+    <h3>Les articles</h3>
+    <p data-target="fr-art-definis" class="cours active">Articles définis et indéfinis</p>
+    <p data-target="fr-art-partitifs" class="cours">Articles partitifs</p>
+    <p data-target="fr-art-contractes" class="cours">Articles contractés</p>
+    <h3>Les déterminants</h3>
+    <p data-target="fr-det-possessifs" class="cours">Déterminants possessifs</p>
+    <p data-target="fr-det-demonstratifs" class="cours">Déterminants démonstratifs</p>
+    <p data-target="fr-det-indefinis" class="cours">Déterminants indéfinis</p>
+    <p data-target="fr-det-numeraux" class="cours">Déterminants numéraux</p>
+    <p data-target="fr-det-interrogatifs" class="cours">Déterminants interrogatifs et exclamatifs</p>
+    <h3>Les noms</h3>
+    <p data-target="fr-noms-genre" class="cours">Le genre des noms</p>
+    <p data-target="fr-noms-nombre" class="cours">Le nombre des noms</p>
+    <p data-target="fr-noms-composes" class="cours">Les noms composés</p>
+    <h3>Les adjectifs</h3>
+    <p data-target="fr-adj-qualificatifs" class="cours">Les adjectifs qualificatifs</p>
+    <p data-target="fr-adj-place" class="cours">La place de l'adjectif</p>
+    <h3>Les pronoms</h3>
+    <p data-target="fr-pronoms-personnels" class="cours">Les pronoms personnels</p>
+    <p data-target="fr-pronoms-possessifs" class="cours">Les pronoms possessifs</p>
+    <p data-target="fr-pronoms-demonstratifs" class="cours">Les pronoms démonstratifs</p>
+    <p data-target="fr-pronoms-relatifs" class="cours">Les pronoms relatifs</p>
+    <p data-target="fr-pronoms-indefinis" class="cours">Les pronoms indéfinis</p>
+    <h3>Les verbes</h3>
+    <p data-target="fr-verbes-generalites" class="cours">Les verbes : généralités</p>
+    <p data-target="fr-verbes-present" class="cours">Le présent de l'indicatif</p>
+    <p data-target="fr-verbes-passe-compose" class="cours">Le passé composé</p>
+    <p data-target="fr-verbes-imparfait" class="cours">L'imparfait</p>
+    <p data-target="fr-verbes-futur" class="cours">Le futur simple</p>
+    <p data-target="fr-verbes-conditionnel" class="cours">Le conditionnel présent</p>
+    <p data-target="fr-verbes-imperatif" class="cours">L'impératif</p>
+    <h3>Les adverbes</h3>
+    <p data-target="fr-adverbes" class="cours">Les adverbes</p>
+    <h3>Les connecteurs logiques</h3>
+    <p data-target="fr-connecteurs-debutant" class="cours">Introduction aux connecteurs logiques</p>
+</div>
+
+<div class="coursModules" id="moduleFrIntermediaire">
+    <div class="saisiePro"><input type="search" class="searchList" placeholder="Rechercher..."></div>
+    <h3>Les connecteurs logiques</h3>
+    <p data-target="fr-connecteurs-intermediaire" class="cours active">Connecteurs logiques approfondis</p>
+    <h3>Les locutions</h3>
+    <p data-target="fr-locutions-intermediaire" class="cours">Les locutions</p>
+    <h3>Le langage soutenu</h3>
+    <p data-target="fr-langage-soutenu-intermediaire" class="cours">Le langage soutenu</p>
+    <h3>Les temps composés</h3>
+    <p data-target="fr-temps-composes" class="cours">Les temps composés</p>
+    <p data-target="fr-accord-participe" class="cours">L'accord du participe passé</p>
+    <h3>La voix passive et le discours indirect</h3>
+    <p data-target="fr-voix-passive" class="cours">La voix passive</p>
+    <p data-target="fr-discours-indirect" class="cours">Le discours indirect</p>
+    <h3>Le subjonctif</h3>
+    <p data-target="fr-subjonctif" class="cours">Le subjonctif présent</p>
+</div>
+
+<div class="coursModules" id="moduleFrAvance">
+    <div class="saisiePro"><input type="search" class="searchList" placeholder="Rechercher..."></div>
+    <h3>Le style et les registres</h3>
+    <p data-target="fr-style-avance" class="cours active">Style et registres de langue</p>
+    <h3>Les figures de style</h3>
+    <p data-target="fr-figures-style" class="cours">Les figures de style</p>
+    <h3>La phonétique</h3>
+    <p data-target="fr-phonetique" class="cours">La phonétique française</p>
+    <h3>L'orthographe</h3>
+    <p data-target="fr-orthographe-avancee" class="cours">Les difficultés orthographiques</p>
+    <h3>L'argumentation</h3>
+    <p data-target="fr-argumentation" class="cours">L'argumentation</p>
+    <h3>Le langage soutenu (approfondi)</h3>
+    <p data-target="fr-langage-soutenu-avance" class="cours">Le langage soutenu approfondi</p>
+</div>
+
+<div class="coursModules" id="moduleFrProfessionnel">
+    <div class="saisiePro"><input type="search" class="searchList" placeholder="Rechercher..."></div>
+    <h3>Rédaction professionnelle</h3>
+    <p data-target="fr-pro-redaction" class="cours active">La rédaction professionnelle</p>
+    <p data-target="fr-pro-courriels" class="cours">Les courriels professionnels</p>
+    <p data-target="fr-pro-rapports" class="cours">Les rapports professionnels</p>
+    <h3>Communication professionnelle</h3>
+    <p data-target="fr-pro-entretiens" class="cours">Les entretiens professionnels</p>
+    <p data-target="fr-pro-negociation" class="cours">La négociation professionnelle</p>
+    <p data-target="fr-pro-langage-soutenu" class="cours">Le langage soutenu professionnel</p>
+</div>
+
+</main>
+
+<script src="commun.js"></script>
+<script src="francais.js"></script>
+</body>
+</html>

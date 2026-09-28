@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <title>Guide premium — LanguageMaster</title>
+    <style>
+        .premium-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 20px 80px;
+        }
+
+        .premium-hero {
+            text-align: center;
+            padding: 40px 24px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            border-radius: var(--radius-lg);
+            margin-bottom: 48px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .premium-hero .crown {
+            font-size: 3em;
+            color: #ffd700;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .premium-hero h1 {
+            font-size: 2em;
+            margin-bottom: 12px;
+        }
+
+        .premium-hero p {
+            font-size: 1.05em;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .premium-section {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+        }
+
+        .premium-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .premium-section h2 i {
+            color: var(--accent);
+            font-size: 0.9em;
+        }
+
+        .premium-section p {
+            color: var(--text);
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+
+        .premium-list {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+
+        .premium-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text);
+        }
+
+        .premium-list li:last-child {
+            border-bottom: none;
+        }
+
+        .premium-list li i {
+            color: #22c55e;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .premium-cta {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--accent-light);
+            border-radius: var(--radius-lg);
+            margin-top: 32px;
+        }
+
+        .premium-cta h2 {
+            color: var(--text);
+            margin-bottom: 12px;
+            justify-content: center;
+        }
+
+        .btn-premium {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--accent);
+            color: white;
+            border-radius: var(--radius-md);
+            font-size: 1.05em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px rgba(255, 152, 0, 0.4);
+            margin-top: 12px;
+        }
+
+        .btn-premium:hover {
+            background: var(--accent-hover);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 152, 0, 0.5);
+        }
+
+        @media (max-width: 600px) {
+            .premium-hero h1 { font-size: 1.5em; }
+            .premium-section { padding: 24px 20px; }
+            .premium-section h2 { font-size: 1.25em; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>LanguageMaster <span class="ouvreMenu">&#9776;</span></h2>
+    <nav class="menu">
+        <a href="index.html"><i class="fas fa-home"></i>Accueil</a>
+        <a href="profil.html"><i class="fas fa-user"></i> Compte</a>
+        <div class="modeSombre"><i class="fas fa-sun"></i>Mode sombre <div class="out"><div class="in"></div></div></div>
+        <a href="anglais.html"><i class="fas fa-book-open-reader"></i> Apprendre l'anglais</a>
+        <a href="francais.html"><i class="fas fa-book-open-reader"></i> Apprendre le Français</a>
+        <a href="exercice.html"><i class="fas fa-graduation-cap"></i> Pratique</a>
+        <a href="livre.html"><i class="fas fa-book"></i>Guide premium <i class="fas fa-crown"></i></a>
+        <a href="matiere.html"><i class="fas fa-list"></i>Matiere</a>
+        <a href=""><i class="fas fa-share-alt"></i>Partager</a>
+        <a href=""><i class="fab fa-whatsapp"></i>Nous contacter</a>
+    </nav>
+</header>
+
+<main class="premium-container">
+
+    <div class="premium-hero">
+        <i class="fas fa-crown crown"></i>
+        <h1>Guide Premium</h1>
+        <p>Passez à la vitesse supérieure avec des ressources exclusives, des fiches de révision et des conseils d'experts.</p>
+    </div>
+
+    <section class="premium-section">
+        <h2><i class="fas fa-star"></i> Ce que vous obtenez</h2>
+        <ul class="premium-list">
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Fiches de révision synthétiques</strong><br>
+                    <span>Des résumés clairs de chaque module, imprimables en PDF pour réviser partout.</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Exercices supplémentaires</strong><br>
+                    <span>Des centaines de questions inédites, classées par difficulté et par thème.</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Audio et prononciation</strong><br>
+                    <span>Écoutez les phrases clés prononcées par des locuteurs natifs (UK, US, FR).</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Suivi détaillé</strong><br>
+                    <span>Statistiques précises sur votre progression : temps d'étude, points faibles, réussites.</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Accès anticipé</strong><br>
+                    <span>Découvrez les nouveaux modules avant tout le monde.</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Support prioritaire</strong><br>
+                    <span>Réponse à vos questions en moins de 24 heures.</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="premium-section">
+        <h2><i class="fas fa-book-open"></i> Modules premium à venir</h2>
+        <p>Le Guide Premium donnera accès à des contenus avancés qui complètent les cours gratuits :</p>
+        <ul class="premium-list">
+            <li>
+                <i class="fas fa-arrow-right"></i>
+                <div>
+                    <strong>L'anglais des affaires avancé</strong><br>
+                    <span>Négociations complexes, présentations investisseurs, gestion d'équipe multiculturelle.</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-arrow-right"></i>
+                <div>
+                    <strong>Littérature et culture anglophones</strong><br>
+                    <span>Analyse de textes, références culturelles, expressions littéraires.</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-arrow-right"></i>
+                <div>
+                    <strong>Français des affaires</strong><br>
+                    <span>Rédaction de rapports, correspondance formelle, réunions professionnelles.</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-arrow-right"></i>
+                <div>
+                    <strong>Préparation aux certifications</strong><br>
+                    <span>TOEIC, TOEFL, IELTS, DELF, DALF : stratégies et exercices ciblés.</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <div class="premium-cta">
+        <h2><i class="fas fa-crown"></i> Débloquez tout le contenu</h2>
+        <p>Rejoignez les apprenants qui progressent plus vite avec le Guide Premium.</p>
+        <a href="#" class="btn-premium">
+            <i class="fas fa-crown"></i> Passer au Premium
+        </a>
+    </div>
+
+</main>
+
+<script src="commun.js"></script>
+</body>
+</html>
