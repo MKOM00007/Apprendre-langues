@@ -233,7 +233,7 @@ body.dark mark.highlight { background: #ff9800; color: #fff; }
 .hero {
   text-align: center;
  padding: 80px 20px 60px;
- background :linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://i.ibb.co/39d67Rcc/Image-24-sept-2026-10-36-00.png');
+ background :linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('monimage.png');
     background-position:center;
     background-size:cover;
   color: white;
